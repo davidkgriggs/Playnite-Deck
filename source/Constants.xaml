@@ -16,11 +16,13 @@
     <!--Trailers-->
     <sys:Boolean x:Key="Trailers">true</sys:Boolean>
 
+    <!--SteamBackground-->
+    <sys:Boolean x:Key="SteamBackground">true</sys:Boolean>
+
     <!--21:9-->
     <sys:Boolean x:Key="TwentyOneByNine">false</sys:Boolean>
 
     <!--NTL--><sys:String x:Key="NewToLibrary">NEW TO LIBRARY</sys:String><!--NTL-->
-
 
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
@@ -46,9 +48,7 @@
     <SolidColorBrush x:Key="OverlayBrush" Color="{DynamicResource OverlayColor}" />
     <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="{DynamicResource ControlBackgroundColorDark}" />
     <SolidColorBrush x:Key="WarningBrush" Color="#ff6b6b" />
-    <!--UIB-->
-    <SolidColorBrush x:Key="UIBrush" Color="{DynamicResource UIColour}" />
-    <!--UIB-->
+    <!--UIB--><SolidColorBrush x:Key="UIBrush" Color="{DynamicResource UIColour}" /><!--UIB-->
 
     <sys:Double x:Key="FontSizeSmall">20</sys:Double>
     <sys:Double x:Key="FontSize">22</sys:Double>

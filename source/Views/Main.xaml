@@ -37,18 +37,23 @@
                                 <Border Background="{DynamicResource GameDetailsBackgroundBrush}" Opacity="0.75" HorizontalAlignment="Stretch" Height="{StaticResource DesignHeight}"/>
                             </StackPanel>
 
-                            <Border Background="{DynamicResource HOMEBackground}" Grid.Row="0" Grid.RowSpan="3"
+                            <Grid Grid.Row="0" Grid.RowSpan="3" Tag="{DynamicResource SteamBackground}"
                                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch">
-                                <Border.Style>
-                                    <Style TargetType="Border">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
                                         <Style.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
                                             <DataTrigger Binding="{Binding ElementName=PART_ElemGameDetails, Path=Visibility}" Value="Visible">
                                                 <Setter Property="Visibility" Value="Collapsed"/>
                                             </DataTrigger>
                                         </Style.Triggers>
                                     </Style>
-                                </Border.Style>
-                            </Border>
+                                </Grid.Style>
+                                <Border Background="{DynamicResource HOMEBackground}"
+                                  HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Grid>
 
                             <Grid Grid.Row="0" Height="90">
                                 <Grid.Style>
@@ -216,6 +221,25 @@
                                 </ButtonEx>
                             </Grid>
 
+                            <Grid Grid.Row="1" Tag="{DynamicResource SteamBackground}">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                            <DataTrigger Binding="{Binding ElementName=PART_ElemGameDetails, Path=Visibility}" Value="Visible">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Border VerticalAlignment="Bottom" Height="100" HorizontalAlignment="Stretch" Background="#0D141C"/>
+                            </Grid>
+                            
                             <DockPanel Grid.Row="1">
                                 <Filters x:Name="PART_ElemFilters"
                                          DockPanel.Dock="Left" Focusable="False" />
@@ -431,22 +455,6 @@
                                     </Style>
                                 </TextBlock.Style>
                             </TextBlock>
-
-                            <Grid Grid.Row="1">
-                                <Grid.Style>
-                                    <Style TargetType="Grid">
-                                        <Style.Triggers>
-                                            <DataTrigger Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False">
-                                                <Setter Property="Visibility" Value="Collapsed"/>
-                                            </DataTrigger>
-                                            <DataTrigger Binding="{Binding ElementName=PART_ElemGameDetails, Path=Visibility}" Value="Visible">
-                                                <Setter Property="Visibility" Value="Collapsed"/>
-                                            </DataTrigger>
-                                        </Style.Triggers>
-                                    </Style>
-                                </Grid.Style>
-                                <Border VerticalAlignment="Bottom" Height="100" HorizontalAlignment="Stretch" Background="#0D141C"/>
-                            </Grid>
                             
                             <Grid Grid.Row="2" Background="{DynamicResource BottomBarBackgroundBrush}"
                               Height="90">

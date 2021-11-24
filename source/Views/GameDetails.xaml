@@ -236,7 +236,7 @@
                                                         <ScaleTransform ScaleX="2" ScaleY="3"/>
                                                     </Grid.RenderTransform>
                                                     <Border Height="4" Width="100" Background="Black"/>
-                                                    <Border Height="4" Width="{PluginSettings Plugin=SuccessStory, Path=Unlocked}" Background="#52ac3a" Margin="0" HorizontalAlignment="Left"/>
+                                                    <Border Height="4" Width="{PluginSettings Plugin=SuccessStory, Path=Percent}" Background="#52ac3a" Margin="0" HorizontalAlignment="Left"/>
                                                 </Grid>
                                             </StackPanel>
                                         </StackPanel>
