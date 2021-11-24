@@ -1,0 +1,86 @@
+﻿<ResourceDictionary xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+                    xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
+
+    <Style x:Key="ItemFilterQuickPreset" TargetType="CheckBoxEx">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Visibility" Value="Collapsed"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="CheckBoxEx">
+                    <Grid Background="Transparent"
+                            Margin="10,0,10,0">
+                        <Border x:Name="VerticalBubble" Background="{TemplateBinding Background}" CornerRadius="35" Opacity="0" Margin="1" Visibility="Collapsed"/>
+                        <Border x:Name="VerticalBubbleFocus" Background="#30AAFF" CornerRadius="35" Opacity="0" Visibility="Collapsed"/>
+                        <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="42" FontWeight="SemiBold" Foreground="#e0e4e7"
+                                   x:Name="TextContent">                            
+                            <Grid Margin="25,15,25,15">                                
+                                <TextBlock Text="{Binding Name}" FontWeight="SemiBold" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center"/>
+                                <StackPanel>
+                                    <TextBlock Text="{Binding Name}" HorizontalAlignment="Center"/>
+                                </StackPanel>                                
+                            </Grid>
+                        </TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True" />
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
+                            <Setter Property="FontSize" Value="32" TargetName="TextContent"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubble"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubbleFocus"/>
+                        </MultiDataTrigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="VerticalBubble"/>
+                            <Setter Property="Visibility" Value="Visible" TargetName="VerticalBubbleFocus"/>
+                            <Setter Property="FontWeight" Value="SemiBold" TargetName="TextContent" />
+                        </Trigger>
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="VerticalBubble"/>
+                            <Setter Property="Foreground" Value="#2f3037" TargetName="TextContent"/>
+                            <Setter Property="FontWeight" Value="SemiBold" TargetName="TextContent" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style TargetType="{x:Type FilterPresetSelector}">
+        <Setter Property="Focusable" Value="False" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type FilterPresetSelector}">
+                    <ItemsControlEx x:Name="PART_ItemsFilterPresets" Focusable="False" AlternationCount="{Binding Items.Count, RelativeSource={RelativeSource Self}}"
+                                    KeyboardNavigation.DirectionalNavigation="Once"
+                                    HorizontalLayout="True">
+                        <ItemsControl.ItemsPanel>                            
+                            <ItemsPanelTemplate>
+                                <StackPanel Orientation="Horizontal" />
+                            </ItemsPanelTemplate>
+                        </ItemsControl.ItemsPanel>
+                        <ItemsControl.Template>
+                            <ControlTemplate>
+                                <ScrollViewer Focusable="False"
+                                              HorizontalScrollBarVisibility="Hidden"
+                                              VerticalScrollBarVisibility="Disabled"
+                                              CanContentScroll="True">
+                                    <ItemsPresenter />
+                                </ScrollViewer>
+                            </ControlTemplate>
+                        </ItemsControl.Template>
+                    </ItemsControlEx>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+</ResourceDictionary>
