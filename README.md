@@ -1,7 +1,5 @@
-# XBOXSERIESish
-XBOXSERIESish is a Theme for Playnite that emulates the XBOX Series UI
-
-See the Playnite Forum thread for more information: https://playnite.link/forum/thread-629.html
+# Playnite Deck
+Playnite Deck is a Theme for Playnite that emulates the Steam Deck UI
 
 Please support the Main Playnite Project: https://www.patreon.com/playnite 
 
