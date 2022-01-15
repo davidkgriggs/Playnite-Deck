@@ -10,7 +10,7 @@
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
                     <Border Background="{TemplateBinding Background}"
-                            BorderBrush="Transparent" BorderThickness="3"
+                            BorderBrush="Transparent" BorderThickness="3" CornerRadius="60"
                             x:Name="MainBorder">                        
                             <ContentPresenter />
                     </Border>

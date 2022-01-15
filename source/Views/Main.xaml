@@ -290,7 +290,7 @@
 
                                     <FilterPresetSelector x:Name="PART_FilterPresetSelector" Margin="100,-60,100,0" Background="Green"/>
                                     
-                                    <Grid Margin="0,20,0,0">
+                                    <Grid Margin="0,20,0,0" Focusable="False">
                                         <Grid.Style>
                                             <Style TargetType="Grid">
                                                 <Style.Triggers>

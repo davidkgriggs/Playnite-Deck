@@ -120,7 +120,35 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Focusable" Value="True"/>
                         </MultiDataTrigger>
-                        
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Settings Fullscreen.HorizontalLayout}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="1"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Settings Fullscreen.HorizontalLayout}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="2"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Settings Fullscreen.HorizontalLayout}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="3"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Settings Fullscreen.HorizontalLayout}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="4"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True"/>
+                        </MultiDataTrigger>
+
                         <Trigger Property="IsChecked" Value="True">
                             <Setter Property="ItemsControl.Visibility" TargetName="OFF" Value="Collapsed"/>
                             <Setter Property="ItemsControl.Opacity" Value="0.99"/>

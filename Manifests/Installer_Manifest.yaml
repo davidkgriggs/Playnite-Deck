@@ -6,3 +6,9 @@ Packages:
     PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v0.9.9/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_0_9_9.pthm
     Changelog:
       - THIS IS IN BETA FOR TESTING!!! Initial release
+  - Version: 1.0.0
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2022-01-15
+    PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v1.0.0/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_1_0_0.pthm
+    Changelog:
+      - Initial release
