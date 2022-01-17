@@ -22,6 +22,9 @@
     <!--21:9-->
     <sys:Boolean x:Key="TwentyOneByNine">false</sys:Boolean>
 
+    <!--NewToLibrary-->
+    <sys:Boolean x:Key="NewToLibraryBool">true</sys:Boolean>
+    
     <!--NTL--><sys:String x:Key="NewToLibrary">NEW TO LIBRARY</sys:String><!--NTL-->
 
     <Color x:Key="BlackColor">#FF000000</Color>

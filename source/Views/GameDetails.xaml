@@ -128,7 +128,7 @@
                                           Content="{DynamicResource LOCGameOptions}" 
                                           Height="100" Width="540" HorizontalContentAlignment="Left" />
 
-                                    <Grid Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                    <Grid Tag="{DynamicResource Trailers}">
                                         <Grid.Style>
                                             <Style>
                                                 <Style.Triggers>
@@ -138,9 +138,20 @@
                                                 </Style.Triggers>
                                             </Style>
                                         </Grid.Style>
-                                        <CheckBoxEx x:Name="MediaButton" Style="{DynamicResource MediaButton}"
+                                        <Grid Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                            <Grid.Style>
+                                                <Style>
+                                                    <Style.Triggers>
+                                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                                                            <Setter Property="ItemsControl.Visibility" Value="Collapsed"/>
+                                                        </DataTrigger>
+                                                    </Style.Triggers>
+                                                </Style>
+                                            </Grid.Style>
+                                            <CheckBoxEx x:Name="MediaButton" Style="{DynamicResource MediaButton}"
                                           Content="{DynamicResource LOCMediaLabel}" IsChecked="False"
                                           Height="100" Width="540" HorizontalContentAlignment="Left" />
+                                        </Grid>
                                     </Grid>
                                 </StackPanel>
                             </StackPanel>
