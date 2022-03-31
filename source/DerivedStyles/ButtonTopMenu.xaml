@@ -24,6 +24,104 @@
         </Setter>
     </Style>
 
+    <Style x:Key="PlayniteMenuButton" TargetType="Button">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SelectionLightBrush}" />
+        <Setter Property="Width" Value="500"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border x:Name="BorderFocus" Margin="0"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                Background="{DynamicResource SelectionBrush}" Visibility="Hidden" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <Image RenderOptions.BitmapScalingMode="Fant" Margin="25,0,30,0" Width="48" Height="48"
+                                   Source="../Images/applogo_clean.png" />
+
+                            <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="32"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                       Margin="{TemplateBinding Padding}"
+                                       Text="{DynamicResource LOCSettingsLabel}"/>
+                        </StackPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NotificationsButton" TargetType="Button">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SelectionLightBrush}" />
+        <Setter Property="Width" Value="500"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border x:Name="BorderFocus" Margin="0"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                Background="{DynamicResource SelectionBrush}" Visibility="Hidden" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <TextBlock Text="&#xeea3;" FontFamily="{StaticResource FontIcoFont}"
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,0,30,0"
+                                                       Foreground="White" FontSize="40" />
+
+                            <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="32"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                       Margin="{TemplateBinding Padding}"
+                                       Text="{DynamicResource LOCNotifications}"/>
+                        </StackPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+                        </Trigger>
+                        <DataTrigger Binding="{Api Notifications.Count}" Value="0">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
     <Style x:Key="ButtonTopSearch" TargetType="Button">
         <Setter Property="Background" Value="Transparent" />
         <Setter Property="Foreground" Value="White"/>
@@ -31,36 +129,40 @@
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="VerticalAlignment" Value="Center" />
         <Setter Property="Focusable" Value="True"/>
+        <Setter Property="Height" Value="70"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="Button">
-                    <Grid>
-                        <Border Background="{TemplateBinding Background}"
-                            x:Name="MainBorder" Margin="-20">
-
-                        </Border>
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="Focus">
+                            <DoubleAnimation Storyboard.TargetProperty="Width" Storyboard.TargetName="Container"
+                                             From="50" To="1795" Duration="0:0:0.2"/>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid x:Name="Container" Width="1795">
+                        <TextBlock x:Name="WhiteImage" Text="&#xed11;" FontFamily="{DynamicResource FontIcoFont}" FontSize="22" 
+                                       VerticalAlignment="Center" HorizontalAlignment="Right"
+                                       Foreground="White" Margin="0,0,0,0"/>
+                        <Border Background="{TemplateBinding Background}" x:Name="MainBorder" Margin="0"/>
                         <Grid Margin="35,0,0,0">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:Name="WhiteImage" Text="&#xed11;" FontFamily="{DynamicResource FontIcoFont}" FontSize="48" 
-                                       VerticalAlignment="Center" HorizontalAlignment="Left"
-                                       Foreground="White" Margin="0,0,0,0"/>
-
-                                <TextBlock x:Name="DarkImage" Text="&#xed11;" FontFamily="{DynamicResource FontIcoFont}" FontSize="48" 
+                                <TextBlock x:Name="DarkImage" Text="&#xed11;" FontFamily="{DynamicResource FontIcoFont}" FontSize="22" 
                                        VerticalAlignment="Center" HorizontalAlignment="Left" Visibility="Collapsed"
                                        Foreground="#0C1319" Margin="0,0,0,0"/>
 
-                                <TextBlock Text="{DynamicResource LOCSearchLabel}" Style="{DynamicResource TextBlockBaseStyle}" Foreground="{TemplateBinding Foreground}"
-                                                       FontStyle="Italic" FontSize="36" Opacity="0.7"
+                                <TextBlock x:Name="Text" Text="{DynamicResource LOCSearchLabel}" Style="{DynamicResource TextBlockBaseStyle}" Foreground="{TemplateBinding Foreground}"
+                                                       FontStyle="Italic" FontSize="32" Opacity="0.7" Visibility="Collapsed"
                                                        VerticalAlignment="Center" Margin="25,0,0,0"/>
                             </StackPanel>
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Background" Value="{DynamicResource GlyphBrush}" TargetName="MainBorder" />
+                            <Setter Property="Background" Value="White" TargetName="MainBorder" />
                             <Setter Property="Foreground" Value="{DynamicResource OverlayMenuBackgroundBrush}"/>
                             <Setter Property="Visibility" TargetName="WhiteImage" Value="Collapsed"/>
                             <Setter Property="Visibility" TargetName="DarkImage" Value="Visible"/>
+                            <Setter Property="Visibility" TargetName="Text" Value="Visible"/>
                             <Setter Property="Effect" TargetName="MainBorder">
                                 <Setter.Value>
                                     <DropShadowEffect ShadowDepth="0"
@@ -70,6 +172,10 @@
                                                       BlurRadius="5"/>
                                 </Setter.Value>
                             </Setter>
+
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource Focus}" />
+                            </Trigger.EnterActions>
                         </Trigger>
                         <DataTrigger Binding="{Binding ElementName=MainMenuButton, Path=IsChecked}" Value="True">
                             <Setter Property="Focusable" Value="False"/>

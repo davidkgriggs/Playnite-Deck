@@ -19,3 +19,9 @@ Packages:
     Changelog:
       - Fixed bug where Media still shows in Game Details although trailers were disabled
       - Added option to disable Playnite Deck NEW TO LIBRARY via DKG Theme Modifier
+  - Version: 1.1.0
+    RequiredApiVersion: 2.0.0
+    ReleaseDate: 2022-03-31
+    PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v1.1.0/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_1_1_0.pthm
+    Changelog:
+      - Rebuilt to look like the new Steam Deck UI

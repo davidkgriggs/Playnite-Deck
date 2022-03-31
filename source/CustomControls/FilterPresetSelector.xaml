@@ -15,7 +15,7 @@
                     <Grid Background="Transparent"
                             Margin="10,0,10,0">
                         <Border x:Name="VerticalBubble" Background="{TemplateBinding Background}" CornerRadius="35" Opacity="0" Margin="1" Visibility="Collapsed"/>
-                        <Border x:Name="VerticalBubbleFocus" Background="#30AAFF" CornerRadius="35" Opacity="0" Visibility="Collapsed"/>
+                        <Border x:Name="VerticalBubbleFocus" Background="#565D6A" CornerRadius="35" Opacity="0" Visibility="Collapsed"/>
                         <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="42" FontWeight="SemiBold" Foreground="#e0e4e7"
                                    x:Name="TextContent">                            
                             <Grid Margin="25,15,25,15">                                

@@ -33,13 +33,13 @@
     <Color x:Key="GlyphLightColor">#FFFFAA00</Color>
     <Color x:Key="SelectionLightColor">#FF8D919D</Color>
     <Color x:Key="OverlayColor">#BB000000</Color>
-    <Color x:Key="UIColour">#FFFFFF</Color>
+    <Color x:Key="UIColour">#23262E</Color>
 
     <Color x:Key="ControlBackgroundColor">#FF2B354D</Color>
     <Color x:Key="ControlBackgroundColorDark">#FF121830</Color>
 
     <Color x:Key="TextColor">#FFEBEBEB</Color>
-    <Color x:Key="TextColorDark">#2f3037</Color>
+    <Color x:Key="TextColorDark">#FFEBEBEB</Color>
 
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
     <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
@@ -90,12 +90,58 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="GameDetailsBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,0.4" >
-        <GradientStop Color="#00091F51" Offset="0.0"/>
+        <GradientStop Color="#80000000" Offset="0.0"/>
         <GradientStop Color="#80000000" Offset="0.8"/>
     </LinearGradientBrush>
 
-    <LinearGradientBrush x:Key="HOMEBackground" StartPoint="0.5,0" EndPoint="0.5,1" >
+    <LinearGradientBrush x:Key="HOMEBackground" StartPoint="0,0" EndPoint="1,1" >
+        <GradientStop Color="#21313d" Offset="0.0"/>
+        <GradientStop Color="#1c1f2a" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="HOMECardBackground" StartPoint="0,0" EndPoint="1,1" >
+        <GradientStop Color="#2E3B4A" Offset="0.0"/>
+        <GradientStop Color="#2D3A49" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="CardBackground" StartPoint="0.5,0" EndPoint="0.5,1" >
         <GradientStop Color="#373D49" Offset="0.0"/>
         <GradientStop Color="#23262F" Offset="1"/>
     </LinearGradientBrush>
+
+
+
+    <Style x:Key="AnimatedFlashCover" TargetType="Border">
+        <Setter Property="Background">
+            <Setter.Value>
+                <LinearGradientBrush>
+                    <GradientStop Color="#00000000 " Offset="0"/>
+                    <GradientStop Color="#40ffffff" Offset="0.01"/>
+                    <GradientStop Color="#40ffffff" Offset="1"/>
+                </LinearGradientBrush>
+            </Setter.Value>
+        </Setter>
+        <Style.Triggers>
+            <MultiDataTrigger>
+                <MultiDataTrigger.Conditions>
+                    <Condition Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="True"/>
+                    <Condition Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=IsActive}" Value="True"/>
+                </MultiDataTrigger.Conditions>
+                <MultiDataTrigger.EnterActions>
+                    <BeginStoryboard x:Name="BeginAnim">
+                        <Storyboard RepeatBehavior="Forever" Duration="0:0:4.5">
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="0" To="1" Duration="0:0:0.2" />
+                            <DoubleAnimation
+							Storyboard.TargetProperty="Background.(GradientBrush.GradientStops)[1].(GradientStop.Offset)"
+							From="0" To="1" Duration="0:0:0.6" />
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" From="1" To="0" BeginTime="0:0:0.6" Duration="0:0:0.3" />
+                        </Storyboard>
+                    </BeginStoryboard>
+                </MultiDataTrigger.EnterActions>
+                <MultiDataTrigger.ExitActions>
+                    <RemoveStoryboard BeginStoryboardName="BeginAnim"/>
+                </MultiDataTrigger.ExitActions>
+            </MultiDataTrigger>
+        </Style.Triggers>
+    </Style>
 </ResourceDictionary>

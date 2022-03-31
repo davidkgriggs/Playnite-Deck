@@ -51,11 +51,11 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Grid.Style>
-                                <Border Background="{DynamicResource HOMEBackground}"
+                                <Border Background="{DynamicResource HOMEBackground}" Opacity="0.9"
                                   HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
                             </Grid>
 
-                            <Grid Grid.Row="0" Height="90">
+                            <Grid Grid.Row="0" Height="70">
                                 <Grid.Style>
                                     <Style TargetType="Grid">
                                         <Setter Property="Background" Value="Transparent"/>
@@ -71,20 +71,19 @@
                                 </Grid.Style>
                                 <Grid.ColumnDefinitions>
                                     <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="4*" />
+                                    <ColumnDefinition Width="*" />
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
                                     <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
-                                    <ColumnDefinition Width="Auto" />
+                                    <ColumnDefinition Width="100" />
                                     <ColumnDefinition Width="25" />
                                 </Grid.ColumnDefinitions>
 
                                 <!--Search Button Top-->
-                                <ButtonEx x:Name="PART_ButtonSearch" VerticalAlignment="Center"
-                                          Style="{DynamicResource ButtonTopSearch}" Width="800"
-                                          Grid.Column="0" Margin="0,0,0,0">
+                                <ButtonEx x:Name="PART_ButtonSearch" VerticalAlignment="Top" HorizontalAlignment="Right"
+                                          Style="{DynamicResource ButtonTopSearch}"
+                                          Grid.Column="1" Margin="0,0,0,0">
                                 </ButtonEx>
 
                                 <ContentControl x:Name="PART_ElemBatteryStatus" Focusable="False" FontSize="42"
@@ -126,7 +125,7 @@
                                     </ButtonEx.Content>
                                 </ButtonEx>
 
-                                <ButtonEx x:Name="PART_ButtonNotifications" VerticalAlignment="Center"
+                                <!--ButtonEx x:Name="PART_ButtonNotifications" VerticalAlignment="Center"
                                           Margin="10,0,10,0" Height="48" Width="48"
                                           Grid.Column="4">
                                     <Button.Content>
@@ -148,14 +147,14 @@
                                             </Style.Triggers>
                                         </Style>
                                     </Button.Style>
-                                </ButtonEx>
+                                </ButtonEx-->
 
                                 <TextBlock x:Name="PART_TextBatteryPercentage" Style="{DynamicResource TextBlockBaseStyle}"
                                        VerticalAlignment="Center" Height="50" Margin="0,0,20,0"
                                        Grid.Column="5"/>
 
                                 <TextBlock x:Name="PART_TextClock" Style="{DynamicResource TextBlockBaseStyle}"
-                                       FontSize="36" FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="30,0,40,0"
+                                       FontWeight="Bold" VerticalAlignment="Center" HorizontalAlignment="Right" Margin="0,0,0,0"
                                        Grid.Column="6"/>
 
                                 <!--Extra Metadata Tools Profile Picture-->
@@ -210,15 +209,7 @@
                                     </StackPanel>
                                 </Grid-->
 
-                                <ButtonEx x:Name="PART_ButtonMainMenu" VerticalAlignment="Center"
-                                          Style="{DynamicResource ButtonTopMenu}"
-                                          Margin="10,0,10,0" Height="60" MinWidth="60"
-                                          Grid.Column="7">
-                                    <Button.Content>
-                                        <Image RenderOptions.BitmapScalingMode="Fant" Margin="2"
-                                           Source="{ThemeFile 'Images/applogo_clean.png'}" />
-                                    </Button.Content>
-                                </ButtonEx>
+                                
                             </Grid>
 
                             <Grid Grid.Row="1" Tag="{DynamicResource SteamBackground}">
@@ -237,7 +228,82 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Grid.Style>
-                                <Border VerticalAlignment="Bottom" Height="100" HorizontalAlignment="Stretch" Background="#0D141C"/>
+                                <Border VerticalAlignment="Bottom" Height="390" HorizontalAlignment="Stretch" Background="{DynamicResource HOMEBackground}"/>
+                            </Grid>
+
+                            <Grid Grid.Row="1" Margin="0,275,0,0">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Visible"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False">
+                                                <Setter Property="Visibility" Value="Collapsed"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
+                                    <Border x:Name="VerticalBubbleFocus" Background="#565D6A" CornerRadius="35">
+                                        <TextBlock Text="{DynamicResource LOCSettingsGameDetailsLabel}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" FontWeight="Bold" Foreground="#e0e4e7" Padding="30,20,30,20"/>
+                                    </Border>
+                                </Grid>
+
+                                <StackPanel HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="25,0,0,25">
+                                    <StackPanel Orientation="Horizontal">
+                                        <Grid Width="500" Margin="0,0,25,0" HorizontalAlignment="Left" VerticalAlignment="Top">
+                                            <TextBlock Text="{DynamicResource LOCMediaLabel}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" FontWeight="Bold" Foreground="#e0e4e7"/>
+                                        </Grid>
+                                        <Grid HorizontalAlignment="Left" Width="1345">
+                                            <TextBlock Text="{DynamicResource LOCGameDescriptionTitle}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" FontWeight="Bold" Foreground="#e0e4e7"/>
+                                        </Grid>
+                                    </StackPanel>
+                                    
+                                    <StackPanel Orientation="Horizontal" Margin="0,10,0,0">
+                                        <!--Extra Metadata Tools Logo-->
+                                        <StackPanel Name="Icon" Orientation="Vertical" Margin="0,0,25,0" HorizontalAlignment="Left" VerticalAlignment="Center" Focusable="False" Width="500" Height="220" Background="{DynamicResource HOMECardBackground}">
+                                            <TextBlock Name="LogoPath" Tag="{DynamicResource ExtraMetadataPath}" Visibility="Collapsed">
+                                                <TextBlock.Style>
+                                                    <Style TargetType="TextBlock">
+                                                        <Setter Property="Text">
+                                                            <Setter.Value>
+                                                                <MultiBinding StringFormat="{}{0}{1}{2}{3}">
+                                                                    <Binding RelativeSource="{RelativeSource Self}" Path="Tag" />
+                                                                    <Binding Source="\ExtraMetadata\games\"/>
+                                                                    <Binding Path="SelectedGame.Id"/>
+                                                                    <Binding Source="\logo.png" />
+                                                                </MultiBinding>
+                                                            </Setter.Value>
+                                                        </Setter>
+                                                    </Style>
+                                                </TextBlock.Style>
+                                            </TextBlock>
+                                            <StackPanel HorizontalAlignment="Left" Margin="10,10">
+                                                <Image Name="LogoImage" Grid.ZIndex="1" MaxWidth="450" MaxHeight="200" 
+                                           Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
+                                           VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                           Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                                    <Image.Style>
+                                                        <Style TargetType="Image">
+                                                            <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text}"/>
+                                                            <Style.Triggers>
+                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="">
+                                                                    <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text, Converter={StaticResource ImageStringToImageConverter}}"/>
+                                                                </DataTrigger>
+                                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                                </DataTrigger>
+                                                            </Style.Triggers>
+                                                        </Style>
+                                                    </Image.Style>
+                                                </Image>
+                                            </StackPanel>
+                                        </StackPanel>
+
+                                        <Grid HorizontalAlignment="Left" Width="1345" MaxHeight="220" Tag="{DynamicResource DescriptionOnOff}" Style="{DynamicResource DscriptionOnOffStyle}" Background="{DynamicResource HOMECardBackground}">
+                                            <HtmlTextView Margin="10,10" Focusable="False" HtmlText="{Binding SelectedGame.Description}" HtmlFontSize="{DynamicResource FontSizeSmall}" HtmlForeground="{DynamicResource TextColor}" ScrollViewer.VerticalScrollBarVisibility="Disabled" ScrollViewer.HorizontalScrollBarVisibility="Disabled"/>
+                                        </Grid>
+                                    </StackPanel>
+                                </StackPanel>
                             </Grid>
                             
                             <DockPanel Grid.Row="1">
@@ -288,7 +354,7 @@
                                                         Foreground="#FFEBEBEB" VerticalAlignment="Center" Margin="20,0,0,5"/>
                                     </Grid>
 
-                                    <FilterPresetSelector x:Name="PART_FilterPresetSelector" Margin="100,-60,100,0" Background="Green"/>
+                                    <FilterPresetSelector x:Name="PART_FilterPresetSelector" Margin="100,-60,100,0" Background="Transparent"/>
                                     
                                     <Grid Margin="0,20,0,0" Focusable="False">
                                         <Grid.Style>
@@ -300,7 +366,7 @@
                                                 </Style.Triggers>
                                             </Style>
                                         </Grid.Style>
-                                        <TextBlock Text="{Binding ActiveFilterPreset.Name}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="52" Margin="95,0,0,0"/>
+                                        <TextBlock Text="{Binding ActiveFilterPreset.Name}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="32" FontWeight="Bold" Margin="40,0,0,0"/>
                                     </Grid>
 
                                     <ListBoxEx x:Name="PART_ListGameItems" VerticalAlignment="Top" 
@@ -311,7 +377,7 @@
                                         <ListBox.Style>
                                             <Style TargetType="ListBoxEx">
                                                 <Setter Property="Margin" Value="20,0,20,0"/>
-                                                <Setter Property="MaxHeight" Value="855"/>
+                                                <Setter Property="MaxHeight" Value="870"/>
                                                 <Style.Triggers>
                                                     <DataTrigger Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="True">
                                                         <Setter Property="Margin" Value="0,0,0,0"/>
@@ -371,14 +437,14 @@
                                                             <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="True"/>
                                                             <Condition Binding="{Settings Fullscreen.Columns}" Value="8"/>
                                                         </MultiDataTrigger.Conditions>
-                                                        <Setter Property="MaxHeight" Value="400"/>
+                                                        <Setter Property="MaxHeight" Value="480"/>
                                                     </MultiDataTrigger>
                                                     <MultiDataTrigger>
                                                         <MultiDataTrigger.Conditions>
                                                             <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="True"/>
                                                             <Condition Binding="{Settings Fullscreen.Columns}" Value="9"/>
                                                         </MultiDataTrigger.Conditions>
-                                                        <Setter Property="MaxHeight" Value="400"/>
+                                                        <Setter Property="MaxHeight" Value="450"/>
                                                     </MultiDataTrigger>
                                                     <MultiDataTrigger>
                                                         <MultiDataTrigger.Conditions>
@@ -387,12 +453,27 @@
                                                         </MultiDataTrigger.Conditions>
                                                         <Setter Property="MaxHeight" Value="350"/>
                                                     </MultiDataTrigger>
+
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False"/>
+                                                            <Condition Binding="{Binding ElementName=MenuButton, Path=IsChecked}" Value="True"/>
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Margin" Value="550,0,0,0"/>
+                                                    </MultiDataTrigger>
+                                                    <MultiDataTrigger>
+                                                        <MultiDataTrigger.Conditions>
+                                                            <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False"/>
+                                                            <Condition Binding="{Binding ElementName=Menus, Path=IsKeyboardFocusWithin}" Value="True"/>
+                                                        </MultiDataTrigger.Conditions>
+                                                        <Setter Property="Margin" Value="550,0,0,0"/>
+                                                    </MultiDataTrigger>
                                                 </Style.Triggers>
                                             </Style>
                                         </ListBox.Style>
                                     </ListBoxEx>
 
-                                    <StackPanel Orientation="Horizontal" Margin="95,-20,0,0">
+                                    <!--StackPanel Orientation="Horizontal" Margin="95,-20,0,0">
                                         <Grid>
                                             <Grid>
                                                 <Grid.Style>
@@ -437,7 +518,7 @@
 											       Text="{Binding SelectedGame.Platforms[0]}" FontSize="32" Foreground="#52ac3a" Margin="30,0,0,0">
                                             </TextBlock>
                                         </StackPanel>
-                                    </StackPanel>
+                                    </StackPanel-->
                                 </StackPanel>
                             </DockPanel>
 
@@ -457,7 +538,7 @@
                             </TextBlock>
                             
                             <Grid Grid.Row="2" Background="{DynamicResource BottomBarBackgroundBrush}"
-                              Height="90">
+                              Height="60">
                                 <Grid.Style>
                                     <Style TargetType="Grid">
                                         <Style.Triggers>
@@ -493,9 +574,9 @@
                                               Style="{DynamicResource ButtonBottomMenu}"
                                               Content="{DynamicResource LOCGameOptions}"  HorizontalAlignment="Right" />
                                     <!--Search-->
-                                    <ButtonEx x:Name="PART_ButtonSearchh"
+                                    <!--ButtonEx x:Name="PART_ButtonSearchh"
                                               Style="{DynamicResource ButtonBottomMenu}"
-                                              Content="{DynamicResource LOCSearchLabel}"  HorizontalAlignment="Right" />
+                                              Content="{DynamicResource LOCSearchLabel}"  HorizontalAlignment="Right" /-->
                                     <!--Filter-->
                                     <ButtonEx x:Name="PART_ButtonFilter"
                                               Style="{DynamicResource ButtonBottomMenu}"
@@ -542,8 +623,54 @@
                                         </Style.Triggers>
                                     </Style>
                                 </Grid.Style>
-                                <CheckBoxEx x:Name="ChangeViewButton" IsChecked="{Settings Fullscreen.HorizontalLayout, Mode=TwoWay}"
-                                            Style="{DynamicResource ChangeViewButton}" VerticalContentAlignment="Bottom" Width="1800"/>
+                                <CheckBoxEx x:Name="MenuButton"
+                                            Style="{DynamicResource MenusButton}" VerticalContentAlignment="Bottom" Width="1800"/>
+                            </Grid>
+
+                            <Grid x:Name="Menus" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="500" Margin="0,0,0,60">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=MenuButton, Path=IsChecked}" Value="True">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Border Background="#0E141A" VerticalAlignment="Stretch" Margin="0,-70,0,0" HorizontalAlignment="Stretch"/>
+                                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,0">
+                                    <!--ButtonEx x:Name="PART_ButtonNotifications" VerticalAlignment="Center"
+                                          Margin="10,0,10,0" Height="48" Width="48"
+                                          Grid.Column="4">
+                                        <Button.Content>
+                                            <Grid>
+                                                <TextBlock Text="&#xeea3;" FontFamily="{StaticResource FontIcoFont}"
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2"
+                                                       Foreground="White" FontSize="30" />
+                                                <TextBlock Text="&#x25CF;" Foreground="{DynamicResource GlyphBrush}"
+                                                       HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                                                       FontSize="24" Margin="0,0,5,0" />
+                                            </Grid>
+                                        </Button.Content>
+                                        <Button.Style>
+                                            <Style TargetType="Button" BasedOn="{StaticResource ButtonTopMenu}">
+                                                <Style.Triggers>
+                                                    <DataTrigger Binding="{Api Notifications.Count}" Value="0">
+                                                        <Setter Property="Visibility" Value="Hidden"/>
+                                                    </DataTrigger>
+                                                </Style.Triggers>
+                                            </Style>
+                                        </Button.Style>
+                                    </ButtonEx-->
+
+                                    <ButtonEx x:Name="PART_ButtonNotifications" Style="{DynamicResource NotificationsButton}"/>
+
+                                    <ButtonEx x:Name="PART_ButtonMainMenu" Style="{DynamicResource PlayniteMenuButton}"/>
+
+                                    <CheckBoxEx x:Name="ChangeViewButton" IsChecked="{Settings Fullscreen.HorizontalLayout, Mode=TwoWay}"
+                                            Style="{DynamicResource ChangeViewButton}" VerticalContentAlignment="Bottom" Width="500"/>
+                                </StackPanel>
                             </Grid>
                         </Grid>
 

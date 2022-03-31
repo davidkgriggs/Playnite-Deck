@@ -9,7 +9,8 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="MaxHeight" Value="510"/>
+        <Setter Property="MaxHeight" Value="600"/>
+        <Setter Property="Focusable" Value="True"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListBoxItem">
@@ -17,21 +18,31 @@
                         <Storyboard x:Key="FocusedOn">
                             <DoubleAnimation Storyboard.TargetName="ScaleTransform"
                                              Storyboard.TargetProperty="ScaleX"
-                                             From="1" To="1.03" Duration="0:0:0.1"/>
+                                             From="1" To="1.05" Duration="0:0:0.1"/>
                             <DoubleAnimation Storyboard.TargetName="ScaleTransform"
                                              Storyboard.TargetProperty="ScaleY"
-                                             From="1" To="1.03" Duration="0:0:0.1"/>
+                                             From="1" To="1.05" Duration="0:0:0.1"/>
                         </Storyboard>
                         <Storyboard x:Key="FocusedOff">
                             <DoubleAnimation Storyboard.TargetName="ScaleTransform"
                                              Storyboard.TargetProperty="ScaleX"
-                                             From="1.03" To="1" Duration="0:0:0.2"/>
+                                             From="1.05" To="1" Duration="0:0:0.2"/>
                             <DoubleAnimation Storyboard.TargetName="ScaleTransform"
                                              Storyboard.TargetProperty="ScaleY"
-                                             From="1.03" To="1" Duration="0:0:0.2"/>
+                                             From="1.05" To="1" Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="Focus">
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MainBorder"
+                                             From="1" To="0.25" Duration="0:0:0.8" AutoReverse="True" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                        <Storyboard x:Key="BorderExpand">
+                            <ThicknessAnimation Storyboard.TargetProperty="Margin" Storyboard.TargetName="MainBorder"
+                                             From="-13" To="-6" Duration="0:0:0.2"/>
+                            <ThicknessAnimation Storyboard.TargetProperty="BorderThickness" Storyboard.TargetName="MainBorder"
+                                             From="10" To="3" Duration="0:0:0.2"/>
                         </Storyboard>
                     </ControlTemplate.Resources>
-                    <Grid RenderTransformOrigin="0.5,0.5"
+                    <Grid RenderTransformOrigin="0.5,0.5" VerticalAlignment="Top"
                           d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
                         <Grid.RenderTransform>
                             <ScaleTransform x:Name="ScaleTransform" ScaleX="1" ScaleY="1" />
@@ -42,10 +53,46 @@
                             </Border.Effect>
                         </Border>
                         <ContentPresenter />
-                        <Grid x:Name="IsFocused" Opacity="0">
-                            <Border x:Name="MainBorder" BorderThickness="5" BorderBrush="{DynamicResource SelectionBrush}"
-                                Margin="-5" Visibility="Collapsed" CornerRadius="0"/>
+
+                        <Grid x:Name="Titles" Visibility="Collapsed" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0,0,-250,-60">
+                            <Grid Visibility="{Settings Fullscreen.ShowGameTitles}" HorizontalAlignment="Left">
+                                <StackPanel>
+                                    <TextBlock Text="{Binding DisplayName}" TextTrimming="CharacterEllipsis"                                   
+                                   Style="{DynamicResource TextBlockBaseStyle}"
+                                   FontSize="22" FontWeight="Bold"
+                                   HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                   TextAlignment="Left"/>
+                                    <StackPanel Orientation="Horizontal">
+                                        <TextBlock Text="&#xec74;" FontFamily="{DynamicResource FontIcoFont}" FontSize="18" 
+                                                           VerticalAlignment="Center" HorizontalAlignment="Center"
+                                                           Foreground="#52ac3a" Margin="0,0,10,0"/>
+                                        <StackPanel Orientation="Horizontal">
+                                            <TextBlock Text="{DynamicResource LOCTimePlayed}" TextTrimming="CharacterEllipsis"                                   
+                                   Style="{DynamicResource TextBlockBaseStyle}"
+                                   FontSize="22" FontWeight="Bold" Foreground="#9CA3AB"
+                                   HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                   TextAlignment="Left"/>
+                                            <TextBlock Text=": " TextTrimming="CharacterEllipsis"                                   
+                                   Style="{DynamicResource TextBlockBaseStyle}"
+                                   FontSize="22" FontWeight="Bold" Foreground="#9CA3AB"
+                                   HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                   TextAlignment="Left"/>
+                                            <TextBlock Text="{Binding Playtime, Converter={StaticResource PlayTimeToStringConverter}}" TextTrimming="CharacterEllipsis"                                   
+                                   Style="{DynamicResource TextBlockBaseStyle}"
+                                   FontSize="22" FontWeight="Bold" Foreground="#9CA3AB"
+                                   HorizontalAlignment="Left" VerticalAlignment="Bottom"
+                                   TextAlignment="Left"/>
+                                        </StackPanel>
+                                    </StackPanel>
+                                </StackPanel>
+                            </Grid>
                         </Grid>
+
+                        <Grid x:Name="IsFocused" Opacity="0">
+                            <Border x:Name="MainBorder" BorderThickness="3" BorderBrush="#A7ABAD"
+                                Margin="-6" Visibility="Collapsed" CornerRadius="0"/>
+                        </Grid>
+                        <Border x:Name="FlashBorder" CornerRadius="0" Opacity="0" Style="{DynamicResource AnimatedFlashCover}"  Visibility="Collapsed" Tag="False"/>
 
                         <Grid Tag="{DynamicResource NewToLibraryBool}">
                             <Grid.Style>
@@ -59,29 +106,34 @@
                             </Grid.Style>
                             <Grid x:Name="NewToLibrary" Visibility="Collapsed">
                                 <Border Background="#199FFF" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
-                                <TextBlock x:Name="NewText" Text="{DynamicResource NewToLibrary}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                                <TextBlock x:Name="NewText" Text="{DynamicResource NewToLibrary}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
                             </Grid>
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
                         <DataTrigger Binding="{Settings Fullscreen.HorizontalLayout}" Value="True">
-                            <Setter Property="Margin" Value="10,0"/>
+                            <Setter Property="Margin" Value="10,0,10,0"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Settings Fullscreen.HorizontalLayout}" Value="False">
-                            <Setter Property="Margin" Value="10,10"/>
-                            <Setter Property="FontSize" Value="16" TargetName="NewText"/>
+                            <Setter Property="Margin" Value="10"/>
+                            <Setter Property="Opacity" Value="0" TargetName="Titles"/>
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ElementName=PART_ListGameItems, Path=IsKeyboardFocusWithin}" Value="True">
                             <Setter Property="Opacity" Value="1" TargetName="IsFocused" />
                         </DataTrigger>
                         <Trigger Property="IsFocused" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="MainBorder" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="Titles" />
                             <Setter Property="Canvas.ZIndex" Value="90" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="FlashBorder" />
+                            <Setter Property="Tag" Value="True" TargetName="FlashBorder" />
                             <Trigger.ExitActions>
                                 <BeginStoryboard Storyboard="{StaticResource FocusedOff}" />
                             </Trigger.ExitActions>
                             <Trigger.EnterActions>
                                 <BeginStoryboard Storyboard="{StaticResource FocusedOn}" />
+                                <BeginStoryboard Storyboard="{StaticResource Focus}" />
+                                <BeginStoryboard Storyboard="{StaticResource BorderExpand}" />
                             </Trigger.EnterActions>
                         </Trigger>
                         <Trigger Property="IsSelected" Value="True">
