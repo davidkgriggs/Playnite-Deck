@@ -111,6 +111,18 @@
 
 
 
+    <!--Trailers-->
+    <Style x:Key="TrailersStyle" TargetType="StackPanel">
+        <Setter Property="Visibility" Value="Visible"/>
+        <Style.Triggers>
+            <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                <Setter Property="Visibility" Value="Collapsed"/>
+            </DataTrigger>
+        </Style.Triggers>
+    </Style>
+
+
+
     <Style x:Key="AnimatedFlashCover" TargetType="Border">
         <Setter Property="Background">
             <Setter.Value>
