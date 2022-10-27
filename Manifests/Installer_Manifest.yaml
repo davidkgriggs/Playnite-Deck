@@ -31,3 +31,9 @@ Packages:
     PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v1.1.1/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_1_1_1.pthm
     Changelog:
       - Fixes issue with trailers not being able to be hidden
+  - Version: 2.0.0
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-10-27
+    PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v2.0.0/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_2_0_0.pthm
+    Changelog:
+      - Rebuilt for Playnite 10
