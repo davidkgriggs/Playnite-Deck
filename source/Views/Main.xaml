@@ -114,16 +114,7 @@
                                     </ContentControl.Style>
                                 </ContentControl>
 
-                                <ButtonEx x:Name="PART_ButtonProgramUpdate" VerticalAlignment="Center"
-                                          Margin="10,0,10,0" Height="48" MinWidth="48"
-                                          Style="{DynamicResource ButtonTopMenu}"                                          
-                                          Grid.Column="3">
-                                    <ButtonEx.Content>
-                                        <TextBlock Text="&#xef08;" FontFamily="{StaticResource FontIcoFont}"                                                   
-                                                   HorizontalAlignment="Center" VerticalAlignment="Center" Margin="2"
-                                                   Foreground="{DynamicResource GlyphLightBrush}" FontSize="30" />
-                                    </ButtonEx.Content>
-                                </ButtonEx>
+                                
 
                                 <!--ButtonEx x:Name="PART_ButtonNotifications" VerticalAlignment="Center"
                                           Margin="10,0,10,0" Height="48" Width="48"
@@ -243,8 +234,8 @@
                                     </Style>
                                 </Grid.Style>
                                 <Grid VerticalAlignment="Center" HorizontalAlignment="Center">
-                                    <Border x:Name="VerticalBubbleFocus" Background="#565D6A" CornerRadius="35">
-                                        <TextBlock Text="{DynamicResource LOCSettingsGameDetailsLabel}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" FontWeight="Bold" Foreground="#e0e4e7" Padding="30,20,30,20"/>
+                                    <Border x:Name="VerticalBubbleFocus" Background="#565D6A" CornerRadius="28">
+                                        <TextBlock Text="{DynamicResource LOCSettingsGameDetailsLabel}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" FontWeight="Bold" Foreground="#e0e4e7" Padding="30,15,30,15"/>
                                     </Border>
                                 </Grid>
 
@@ -307,6 +298,19 @@
                             </Grid>
                             
                             <DockPanel Grid.Row="1">
+                                <Grid DockPanel.Dock="Left" Width="350">
+                                    <Grid.Style>
+                                        <Style TargetType="Grid">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding ElementName=MenuButton, Path=IsChecked}" Value="True">
+                                                    <Setter Property="Visibility" Value="Visible"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Grid.Style>
+                                </Grid>
+                                
                                 <Filters x:Name="PART_ElemFilters"
                                          DockPanel.Dock="Left" Focusable="False" />
 
@@ -379,6 +383,10 @@
                                                 <Setter Property="Margin" Value="20,0,20,0"/>
                                                 <Setter Property="MaxHeight" Value="870"/>
                                                 <Style.Triggers>
+                                                    <DataTrigger Binding="{Binding ElementName=MenuButton, Path=IsChecked}" Value="True">
+                                                        <Setter Property="Height" Value="5"/>
+                                                    </DataTrigger>
+
                                                     <DataTrigger Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="True">
                                                         <Setter Property="Margin" Value="0,0,0,0"/>
                                                     </DataTrigger>
@@ -454,20 +462,20 @@
                                                         <Setter Property="MaxHeight" Value="350"/>
                                                     </MultiDataTrigger>
 
-                                                    <MultiDataTrigger>
+                                                    <!--MultiDataTrigger>
                                                         <MultiDataTrigger.Conditions>
                                                             <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False"/>
                                                             <Condition Binding="{Binding ElementName=MenuButton, Path=IsChecked}" Value="True"/>
                                                         </MultiDataTrigger.Conditions>
                                                         <Setter Property="Margin" Value="550,0,0,0"/>
-                                                    </MultiDataTrigger>
+                                                    </>
                                                     <MultiDataTrigger>
                                                         <MultiDataTrigger.Conditions>
                                                             <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False"/>
                                                             <Condition Binding="{Binding ElementName=Menus, Path=IsKeyboardFocusWithin}" Value="True"/>
                                                         </MultiDataTrigger.Conditions>
                                                         <Setter Property="Margin" Value="550,0,0,0"/>
-                                                    </MultiDataTrigger>
+                                                    </MultiDataTrigger-->
                                                 </Style.Triggers>
                                             </Style>
                                         </ListBox.Style>
@@ -624,10 +632,24 @@
                                     </Style>
                                 </Grid.Style>
                                 <CheckBoxEx x:Name="MenuButton"
-                                            Style="{DynamicResource MenusButton}" VerticalContentAlignment="Bottom" Width="1800"/>
+                                            Style="{DynamicResource MenusButton}" VerticalContentAlignment="Bottom" Width="350"/>
                             </Grid>
 
-                            <Grid x:Name="Menus" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Bottom" HorizontalAlignment="Left" Width="500" Margin="0,0,0,60">
+                            <Grid Grid.Row="0" Grid.RowSpan="2">
+                                <Grid.Style>
+                                    <Style TargetType="Grid">
+                                        <Setter Property="Visibility" Value="Collapsed"/>
+                                        <Style.Triggers>
+                                            <DataTrigger Binding="{Binding ElementName=MenuButton, Path=IsChecked}" Value="True">
+                                                <Setter Property="Visibility" Value="Visible"/>
+                                            </DataTrigger>
+                                        </Style.Triggers>
+                                    </Style>
+                                </Grid.Style>
+                                <Border Background="Black" Opacity="0.6" HorizontalAlignment="Stretch" VerticalAlignment="Stretch"/>
+                            </Grid>
+                            
+                            <Grid x:Name="Menus" Grid.Row="1" Grid.RowSpan="2" VerticalAlignment="Stretch" HorizontalAlignment="Left" Width="350" Margin="0,0,0,60">
                                 <Grid.Style>
                                     <Style TargetType="Grid">
                                         <Setter Property="Visibility" Value="Collapsed"/>
@@ -639,7 +661,7 @@
                                     </Style>
                                 </Grid.Style>
                                 <Border Background="#0E141A" VerticalAlignment="Stretch" Margin="0,-70,0,0" HorizontalAlignment="Stretch"/>
-                                <StackPanel VerticalAlignment="Bottom" Margin="0,0,0,0">
+                                <StackPanel VerticalAlignment="Center" Margin="0,0,0,0">
                                     <!--ButtonEx x:Name="PART_ButtonNotifications" VerticalAlignment="Center"
                                           Margin="10,0,10,0" Height="48" Width="48"
                                           Grid.Column="4">
@@ -663,13 +685,14 @@
                                             </Style>
                                         </Button.Style>
                                     </ButtonEx-->
-
                                     <ButtonEx x:Name="PART_ButtonNotifications" Style="{DynamicResource NotificationsButton}"/>
+                                    
+                                    <CheckBoxEx x:Name="ChangeViewButton" IsChecked="{Settings Fullscreen.HorizontalLayout, Mode=TwoWay}"
+                                            Style="{DynamicResource ChangeViewButton}" VerticalContentAlignment="Bottom" Width="350"/>                                    
 
                                     <ButtonEx x:Name="PART_ButtonMainMenu" Style="{DynamicResource PlayniteMenuButton}"/>
 
-                                    <CheckBoxEx x:Name="ChangeViewButton" IsChecked="{Settings Fullscreen.HorizontalLayout, Mode=TwoWay}"
-                                            Style="{DynamicResource ChangeViewButton}" VerticalContentAlignment="Bottom" Width="500"/>
+                                    <ButtonEx x:Name="PART_ButtonProgramUpdate" Style="{DynamicResource UpdateButton}"/>
                                 </StackPanel>
                             </Grid>
                         </Grid>

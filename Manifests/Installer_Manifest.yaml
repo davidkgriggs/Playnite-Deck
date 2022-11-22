@@ -37,3 +37,9 @@ Packages:
     PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v2.0.0/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_2_0_0.pthm
     Changelog:
       - Rebuilt for Playnite 10
+  - Version: 2.1.0
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2022-11-22
+    PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v2.1.0/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_2_1_0.pthm
+    Changelog:
+      - Updated visuals throughout

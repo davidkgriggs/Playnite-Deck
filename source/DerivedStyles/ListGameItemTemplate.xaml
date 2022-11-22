@@ -5,7 +5,6 @@
                     mc:Ignorable="d">
 
     <Style x:Key="ListGameItemTemplate" TargetType="{x:Type GameListItem}">
-        <Setter Property="MaxHeight" Value="500"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type GameListItem}">

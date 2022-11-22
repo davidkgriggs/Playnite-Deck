@@ -2,25 +2,66 @@
                     xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml">
 
     <Style x:Key="GameMenuButton" BasedOn="{StaticResource {x:Type ButtonEx}}" TargetType="ButtonEx">
-        <Setter Property="Margin" Value="5" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="Padding" Value="12,20,12,20" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SelectionLightBrush}" />
+        <Setter Property="BorderThickness" Value="0" />
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border x:Name="BorderFocus" Margin="0"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                Background="White" Visibility="Hidden" />
+                        <TextBlock Style="{DynamicResource TextBlockBaseStyle}"
+                                   Foreground="{TemplateBinding Foreground}"
+                                   HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                   VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                   Margin="{TemplateBinding Padding}">                            
+                                <ContentPresenter />
+                        </TextBlock>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="#23262e"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="#23262e"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+                        </Trigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
     </Style>
 
     <Style x:Key="GameMenuBorder" TargetType="Border">
-        <Setter Property="CornerRadius" Value="3" />
+        <Setter Property="CornerRadius" Value="0" />
         <Setter Property="Width" Value="400" />
-        <Setter Property="Background" Value="{DynamicResource OverlayMenuBackgroundBrush}" />
+        <Setter Property="Background" Value="#23262e" />
+        <Setter Property="VerticalAlignment" Value="Top"/>
     </Style>
 
     <Style x:Key="GameMenuHeaderText" BasedOn="{StaticResource TextBlockBaseStyle}" TargetType="TextBlock" >
-        <Setter Property="VerticalAlignment" Value="Bottom" />
-        <Setter Property="HorizontalAlignment" Value="Stretch" />
+        <Setter Property="VerticalAlignment" Value="Top" />
+        <Setter Property="HorizontalAlignment" Value="Center" />
         <Setter Property="TextWrapping" Value="Wrap" />
         <Setter Property="Padding" Value="15,15,15,15" />
-        <Setter Property="Background" Value="#AA000000" />
+        <Setter Property="Background" Value="#00000000" />
+        <Setter Property="Margin" Value="0,-60,0,0"/>
     </Style>
 
     <DataTemplate x:Key="GameMenuHeaderTemplate">
-        <TextBlock Text="{Binding DisplayName}"
+        <TextBlock Text="{Binding Name}"
                    Style="{DynamicResource GameMenuHeaderText}" />
     </DataTemplate>
 
@@ -76,6 +117,22 @@
         <StackPanel Orientation="Horizontal">
             <TextBlock Width="25" Margin="0,0,10,0"
                        VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock Text="{Binding}" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GameMenuCompletionStatusTemplate">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Width="25" Margin="0,0,10,0"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" />
+            <TextBlock Text="{Binding}" VerticalAlignment="Center" />
+        </StackPanel>
+    </DataTemplate>
+
+    <DataTemplate x:Key="GameMenuSetFieldsTemplate">
+        <StackPanel Orientation="Horizontal">
+            <TextBlock Text="&#xeded;" FontFamily="{DynamicResource FontIcoFont}" FontSize="24" Width="25"
+                       VerticalAlignment="Center" HorizontalAlignment="Center" Margin="0,0,10,0"/>
             <TextBlock Text="{Binding}" VerticalAlignment="Center" />
         </StackPanel>
     </DataTemplate>

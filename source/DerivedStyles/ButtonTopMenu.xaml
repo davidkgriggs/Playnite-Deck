@@ -42,9 +42,9 @@
                                 SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
                                 Background="{DynamicResource SelectionBrush}" Visibility="Hidden" />
                         <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
-                            <Image RenderOptions.BitmapScalingMode="Fant" Margin="25,0,30,0" Width="48" Height="48"
-                                   Source="../Images/applogo_clean.png" />
-
+                            <TextBlock Text="&#xE713;" FontFamily="Segoe MDL2 Assets"
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,0,30,0"
+                                                       Foreground="White" FontSize="40" />
                             <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="32"
                                        Foreground="{TemplateBinding Foreground}"
                                        HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
@@ -99,6 +99,57 @@
                                        VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
                                        Margin="{TemplateBinding Padding}"
                                        Text="{DynamicResource LOCNotifications}"/>
+                        </StackPanel>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+                        </Trigger>
+                        <Trigger Property="IsMouseOver" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+                        </Trigger>
+                        <Trigger Property="IsEnabled" Value="False">
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+                        </Trigger>
+                        <DataTrigger Binding="{Api Notifications.Count}" Value="0">
+                            <Setter Property="Visibility" Value="Hidden"/>
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="UpdateButton" TargetType="Button">
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="Foreground" Value="{DynamicResource TextBrush}" />
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="HorizontalContentAlignment" Value="Left" />
+        <Setter Property="VerticalContentAlignment" Value="Center" />
+        <Setter Property="BorderBrush" Value="{DynamicResource SelectionLightBrush}" />
+        <Setter Property="Width" Value="500"/>
+        <Setter Property="Height" Value="70"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="Button">
+                    <Grid Background="{TemplateBinding Background}">
+                        <Border x:Name="BorderFocus" Margin="0"
+                                SnapsToDevicePixels="{TemplateBinding SnapsToDevicePixels}"
+                                Background="{DynamicResource SelectionBrush}" Visibility="Hidden" />
+                        <StackPanel Orientation="Horizontal" HorizontalAlignment="Left">
+                            <TextBlock Text="&#xef08;" FontFamily="{StaticResource FontIcoFont}"
+                                                       HorizontalAlignment="Center" VerticalAlignment="Center" Margin="25,0,30,0"
+                                                       Foreground="White" FontSize="40" />
+
+                            <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="32"
+                                       Foreground="{TemplateBinding Foreground}"
+                                       HorizontalAlignment="{TemplateBinding HorizontalContentAlignment}"
+                                       VerticalAlignment="{TemplateBinding VerticalContentAlignment}"
+                                       Margin="{TemplateBinding Padding}"
+                                       Text="{DynamicResource LOCUpdaterWindowTitle}"/>
                         </StackPanel>
                     </Grid>
                     <ControlTemplate.Triggers>

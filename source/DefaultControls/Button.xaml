@@ -180,27 +180,21 @@
                     <Grid Background="Transparent" HorizontalAlignment="Center" VerticalAlignment="Bottom" Width="{TemplateBinding Width}" Height="{TemplateBinding Height}">
                         <Border x:Name="Background" Background="Transparent" Width="500" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom"/>
                         <Border x:Name="BorderFocus" Background="#23262E" Width="500" Height="70" HorizontalAlignment="Left" VerticalAlignment="Bottom" Margin="0" Visibility="Hidden"/>
+                        <Border x:Name="BorderFocusTab" Background="#1a9efe" CornerRadius="10" Width="50" Height="50" Margin="-35,0,0,0" HorizontalAlignment="Left" Visibility="Visible"/>
 
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Bottom" Margin="10,0,0,20">
-                            <StackPanel x:Name="ON" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0">
+                            <StackPanel x:Name="ON" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,10,0,0">
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
+                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
+                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
                                 </StackPanel>
                                 <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
-                                </StackPanel>
-                                <StackPanel Orientation="Horizontal" Margin="0,6,0,0">
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
-                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
+                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
+                                    <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="12" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
                                 </StackPanel>
                             </StackPanel>
 
-                            <StackPanel x:Name="OFF" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0">
+                            <StackPanel x:Name="OFF" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,5,0,0">
                                 <StackPanel Orientation="Horizontal" Margin="0,0,0,0">
                                     <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
                                     <TextBlock Text="&#xE73B;" FontFamily="Segoe MDL2 Assets" FontSize="8" Foreground="{TemplateBinding Foreground}" Margin="0,0,6,0"/>
@@ -210,7 +204,7 @@
 
                             <TextBlock Text="{DynamicResource LOCAllGames}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="32"
                                        Foreground="{TemplateBinding Foreground}"
-                                       VerticalAlignment="Center" Margin="30,0,0,0"/>
+                                       VerticalAlignment="Center" Margin="30,10,0,0"/>
                         </StackPanel>
                     </Grid>
                     <ControlTemplate.Triggers>
@@ -222,6 +216,7 @@
                         </Trigger>
                         <Trigger Property="IsEnabled" Value="False">
                             <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocusTab" />
                         </Trigger>
 
                         <!--MultiDataTrigger>
@@ -394,30 +389,25 @@
             <Setter.Value>
                 <ControlTemplate TargetType="CheckBoxEx">
                     <Grid Background="{TemplateBinding Background}">
-                        <Border x:Name="VerticalBubbleFocus" Background="Transparent" CornerRadius="25" HorizontalAlignment="Center" VerticalAlignment="Center">
+                        <Border x:Name="VerticalBubbleFocus" Background="Transparent" CornerRadius="22" HorizontalAlignment="Center" VerticalAlignment="Center">
                             <StackPanel Orientation="Horizontal">
-                                <TextBlock x:Name="Text" Text="{DynamicResource LOCGameDetails}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" Foreground="#e0e4e7" Padding="30,10,0,10"/>
-                                <TextBlock x:Name="Checked" Text="&#xeed7;" FontFamily="{StaticResource FontIcoFont}" Visibility="Hidden"
-                                                       HorizontalAlignment="Center" VerticalAlignment="Center" Margin="5,0,0,0" Padding="0,0,10,0"
-                                                       Foreground="#52ac3a" FontSize="20" />
+                                <TextBlock x:Name="Text" Text="{DynamicResource LOCGameDetails}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" Foreground="#e0e4e7" Padding="30,10,30,10"/>
                             </StackPanel>
                         </Border>
                     </Grid>
                     <ControlTemplate.Triggers>
-                        <Trigger Property="IsFocused" Value="True">
+                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Background" Value="White" TargetName="VerticalBubbleFocus" />
                             <Setter Property="Foreground" Value="#23262e" TargetName="Text" />
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
+                        </Trigger>
+                        <Trigger Property="IsFocused" Value="True">
+                            <Setter Property="Background" Value="#565D6A" TargetName="VerticalBubbleFocus" />
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="Text" />
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
-                            <Setter Property="Background" Value="White" TargetName="VerticalBubbleFocus" />
-                            <Setter Property="Foreground" Value="#23262e" TargetName="Text" />
-                            <Setter Property="Foreground" Value="{DynamicResource TextBrushDark}"/>
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="True">
                             <Setter Property="Background" Value="#565D6A" TargetName="VerticalBubbleFocus" />
-                            <Setter Property="Visibility" Value="Visible" TargetName="Checked"/>
-                        </Trigger>
+                            <Setter Property="Foreground" Value="{DynamicResource TextBrush}" TargetName="Text" />
+                        </Trigger>                        
                         <DataTrigger Binding="{Binding ElementName=ZoomButton, Path=IsChecked}" Value="True">
                             <Setter Property="Focusable" Value="False"/>
                         </DataTrigger>
@@ -621,7 +611,7 @@
         <Setter Property="BorderBrush" Value="{DynamicResource SelectionLightBrush}" />
         <Setter Property="BorderThickness" Value="0" />
         <Setter Property="FontSize" Value="22"/>
-        <Setter Property="IsChecked" Value="True"/>
+        <Setter Property="IsChecked" Value="False"/>
         <Setter Property="Width" Value="75"/>
         <Setter Property="Height" Value="75"/>
         <Setter Property="Opacity" Value="1"/>

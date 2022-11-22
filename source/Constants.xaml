@@ -109,6 +109,28 @@
         <GradientStop Color="#23262F" Offset="1"/>
     </LinearGradientBrush>
 
+    <LinearGradientBrush x:Key="BackgroundVerticalFade" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#000000" Offset="0.9"/>
+        <GradientStop Color="#00000000" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BackgroundHorizontalFade" StartPoint="0,0.5" EndPoint="1,0.5" >
+        <GradientStop Color="#00000000" Offset="0"/>
+        <GradientStop Color="#000000" Offset="0.02"/>
+        <GradientStop Color="#000000" Offset="0.98"/>
+        <GradientStop Color="#00000000" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="TrailerVerticalFade" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#000000" Offset="0.5"/>
+        <GradientStop Color="#00000000" Offset="0.6"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="GameDetailsVerticalFade" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#40000000" Offset="0.5"/>
+        <GradientStop Color="#80000000" Offset="0.6"/>
+    </LinearGradientBrush>
+
 
 
     <!--Trailers-->
