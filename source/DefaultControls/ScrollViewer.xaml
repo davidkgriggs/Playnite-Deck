@@ -37,7 +37,7 @@
 
     <Style TargetType="{x:Type ScrollBar}">
         <Setter Property="Stylus.IsFlicksEnabled" Value="False" />
-        <Setter Property="Background" Value="{DynamicResource ControlBackgroundBrush}" />        
+        <Setter Property="Background" Value="{DynamicResource SelectionLightBrush}" />        
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="{x:Type ScrollBar}">
@@ -47,7 +47,7 @@
                             <sys:Double x:Key="{x:Static SystemParameters.VerticalScrollBarButtonHeightKey}">42</sys:Double>
                         </Track.Resources>
                         <Track.Thumb>
-                            <Thumb Width="60" Background="{TemplateBinding ScrollViewer.Background}" />
+                            <Thumb Width="15" Background="{TemplateBinding ScrollViewer.Background}" />
                         </Track.Thumb>
                         <Track.DecreaseRepeatButton>
                             <RepeatButton Style="{DynamicResource ScrollBarTrackButton}"

@@ -15,7 +15,7 @@
                     <Grid Background="Transparent"
                             Margin="10,0,10,0">
                         <Border x:Name="VerticalBubble" Background="{TemplateBinding Background}" CornerRadius="35" Opacity="0" Margin="1" Visibility="Collapsed"/>
-                        <Border x:Name="VerticalBubbleFocus" Background="#565D6A" CornerRadius="35" Opacity="0" Visibility="Collapsed"/>
+                        <Border x:Name="VerticalBubbleFocus" Background="White" CornerRadius="35" Opacity="0" Visibility="Collapsed"/>
                         <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="42" FontWeight="SemiBold" Foreground="#e0e4e7"
                                    x:Name="TextContent">                            
                             <Grid Margin="25,15,25,15">                                
@@ -29,25 +29,93 @@
                     <ControlTemplate.Triggers>
                         <MultiDataTrigger>
                             <MultiDataTrigger.Conditions>
-                                <Condition Binding="{Binding ElementName=ChangeViewButton, Path=IsChecked}" Value="False"/>
+                                <Condition Binding="{Binding ElementName=MoreGames, Path=IsChecked}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="0"/>
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Focusable" Value="True" />
                             <Setter Property="Visibility" Value="Visible"/>
-                            <Setter Property="Background" Value="White"/>
+                            <Setter Property="Background" Value="{DynamicResource BubbleBrush}"/>
                             <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
-                            <Setter Property="FontSize" Value="32" TargetName="TextContent"/>
+                            <Setter Property="FontSize" Value="26" TargetName="TextContent"/>
                             <Setter Property="Opacity" Value="1" TargetName="VerticalBubble"/>
                             <Setter Property="Opacity" Value="1" TargetName="VerticalBubbleFocus"/>
                         </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=MoreGames, Path=IsChecked}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="1"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True" />
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="Background" Value="{DynamicResource BubbleBrush}"/>
+                            <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
+                            <Setter Property="FontSize" Value="26" TargetName="TextContent"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubble"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubbleFocus"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=MoreGames, Path=IsChecked}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="2"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True" />
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="Background" Value="{DynamicResource BubbleBrush}"/>
+                            <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
+                            <Setter Property="FontSize" Value="26" TargetName="TextContent"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubble"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubbleFocus"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=MoreGames, Path=IsChecked}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="3"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True" />
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="Background" Value="{DynamicResource BubbleBrush}"/>
+                            <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
+                            <Setter Property="FontSize" Value="26" TargetName="TextContent"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubble"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubbleFocus"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=MoreGames, Path=IsChecked}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="4"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True" />
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="Background" Value="{DynamicResource BubbleBrush}"/>
+                            <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
+                            <Setter Property="FontSize" Value="26" TargetName="TextContent"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubble"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubbleFocus"/>
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=MoreGames, Path=IsChecked}" Value="True"/>
+                                <Condition Binding="{Binding ElementName=PART_ListGameItems, Path=SelectedIndex}" Value="5"/>
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True" />
+                            <Setter Property="Visibility" Value="Visible"/>
+                            <Setter Property="Background" Value="{DynamicResource BubbleBrush}"/>
+                            <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
+                            <Setter Property="FontSize" Value="26" TargetName="TextContent"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubble"/>
+                            <Setter Property="Opacity" Value="1" TargetName="VerticalBubbleFocus"/>
+                        </MultiDataTrigger>
+                        
+                        <Trigger Property="IsChecked" Value="True">
+                            <Setter Property="Visibility" Value="Visible" TargetName="VerticalBubble"/>
+                            <Setter Property="Foreground" Value="#e0e4e7" TargetName="TextContent"/>
+                            <Setter Property="FontWeight" Value="SemiBold" TargetName="TextContent" />
+                        </Trigger>
                         <Trigger Property="IsFocused" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="VerticalBubble"/>
                             <Setter Property="Visibility" Value="Visible" TargetName="VerticalBubbleFocus"/>
                             <Setter Property="FontWeight" Value="SemiBold" TargetName="TextContent" />
-                        </Trigger>
-                        <Trigger Property="IsChecked" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="VerticalBubble"/>
                             <Setter Property="Foreground" Value="#2f3037" TargetName="TextContent"/>
-                            <Setter Property="FontWeight" Value="SemiBold" TargetName="TextContent" />
                         </Trigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>

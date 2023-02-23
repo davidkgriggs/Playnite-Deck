@@ -9,7 +9,7 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="Focusable" Value="True"/>
+        <Setter Property="Focusable" Value="False"/>
         <Setter Property="Template">
             <Setter.Value>
                 <ControlTemplate TargetType="ListBoxItem">
@@ -111,15 +111,323 @@
                         </Grid>
                     </Grid>
                     <ControlTemplate.Triggers>
+                        <Trigger Property="ListBox.AlternationIndex" Value="0">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="1">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="2">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="3">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="4">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="5">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="6">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="7">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="8">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="9">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="10">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="11">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="12">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="13">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="14">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="15">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="16">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="17">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="18">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="19">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="20">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="21">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="22">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="23">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="24">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="25">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="26">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="27">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="28">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="29">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="30">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="31">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="32">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="33">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="34">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="35">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="36">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="37">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="38">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="39">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="40">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="41">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="42">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="43">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="44">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="45">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="46">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="47">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="48">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="49">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="50">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="51">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="52">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="53">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="54">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="55">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="56">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="57">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="58">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="59">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="60">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="61">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="62">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="63">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="64">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="65">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="66">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="67">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="68">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="69">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="70">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="71">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="72">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="73">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="74">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="75">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="76">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="77">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="78">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="79">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="80">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="81">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="82">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="83">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="84">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="85">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="86">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="87">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="88">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="89">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="90">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="91">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="92">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="93">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="94">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="95">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="96">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="97">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="98">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="99">
+                            <Setter Property="Focusable" Value="True"/>
+                        </Trigger>
+
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding ElementName=MoreGames, Path=IsChecked}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Focusable" Value="True" />
+                        </MultiDataTrigger>
+
                         <DataTrigger Binding="{Settings Fullscreen.HorizontalLayout}" Value="False">
-                            <Setter Property="Opacity" Value="0" TargetName="Titles"/>
+                            <!--Setter Property="Opacity" Value="0" TargetName="Titles"/-->
                         </DataTrigger>
                         <DataTrigger Binding="{Binding ElementName=PART_ListGameItems, Path=IsKeyboardFocusWithin}" Value="True">
                             <Setter Property="Opacity" Value="1" TargetName="IsFocused" />
                         </DataTrigger>
                         <Trigger Property="IsFocused" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="MainBorder" />
-                            <Setter Property="Visibility" Value="Visible" TargetName="Titles" />
+                            <!--Setter Property="Visibility" Value="Visible" TargetName="Titles" /-->
                             <Setter Property="Canvas.ZIndex" Value="90" />
                             <Setter Property="Visibility" Value="Visible" TargetName="FlashBorder" />
                             <Setter Property="Tag" Value="True" TargetName="FlashBorder" />
@@ -144,6 +452,667 @@
                             </MultiDataTrigger.Conditions>
                             <Setter Property="Visibility" Value="Visible" TargetName="NewToLibrary"/>
                         </MultiDataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="RowItemsStyle" TargetType="ListBoxItem">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Visibility" Value="Collapsed"/>
+        <Setter Property="Height" Value="390"/>
+        <Setter Property="Width" Value="260"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <ControlTemplate.Resources>
+                        <Storyboard x:Key="FocusedOn">
+                            <DoubleAnimation Storyboard.TargetName="ScaleTransform"
+                                             Storyboard.TargetProperty="ScaleX"
+                                             From="1" To="1.03" Duration="0:0:0.1"/>
+                            <DoubleAnimation Storyboard.TargetName="ScaleTransform"
+                                             Storyboard.TargetProperty="ScaleY"
+                                             From="1" To="1.03" Duration="0:0:0.1"/>
+                        </Storyboard>
+                        <Storyboard x:Key="FocusedOff">
+                            <DoubleAnimation Storyboard.TargetName="ScaleTransform"
+                                             Storyboard.TargetProperty="ScaleX"
+                                             From="1.03" To="1" Duration="0:0:0.2"/>
+                            <DoubleAnimation Storyboard.TargetName="ScaleTransform"
+                                             Storyboard.TargetProperty="ScaleY"
+                                             From="1.03" To="1" Duration="0:0:0.2"/>
+                        </Storyboard>
+                        <Storyboard x:Key="Focus">
+                            <DoubleAnimation Storyboard.TargetProperty="Opacity" Storyboard.TargetName="MainBorder"
+                                             From="1" To="0.25" Duration="0:0:0.8" AutoReverse="True" RepeatBehavior="Forever"/>
+                        </Storyboard>
+                        <Storyboard x:Key="BorderExpand">
+                            <ThicknessAnimation Storyboard.TargetProperty="Margin" Storyboard.TargetName="MainBorder"
+                                             From="-13" To="-6" Duration="0:0:0.2"/>
+                            <ThicknessAnimation Storyboard.TargetProperty="BorderThickness" Storyboard.TargetName="MainBorder"
+                                             From="10" To="3" Duration="0:0:0.2"/>
+                        </Storyboard>
+
+                        <Storyboard x:Key="BorderShimmerAnim" RepeatBehavior="Forever">
+                            <ColorAnimation From="#00000000" To="#33FFFFFF" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" Storyboard.TargetName="BorderShimmer" BeginTime="0:0:0" Duration="0:0:01.50" AutoReverse="True">
+                                <ColorAnimation.EasingFunction>
+                                    <ExponentialEase EasingMode="EaseInOut" />
+                                </ColorAnimation.EasingFunction>
+                            </ColorAnimation>
+                            <ColorAnimation From="#00000000" To="#00000000" Storyboard.TargetProperty="(Button.Background).(SolidColorBrush.Color)" Storyboard.TargetName="BorderShimmer" BeginTime="0:0:03" Duration="0:0:06">
+                                <ColorAnimation.EasingFunction>
+                                    <ExponentialEase EasingMode="EaseInOut" />
+                                </ColorAnimation.EasingFunction>
+                            </ColorAnimation>
+                        </Storyboard>
+                    </ControlTemplate.Resources>
+                    <Grid Margin="10"
+                          RenderTransformOrigin="0,0.5" VerticalAlignment="Top"
+                          d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
+                        <Grid.RenderTransform>
+                            <ScaleTransform x:Name="ScaleTransform" ScaleX="1" ScaleY="1" />
+                        </Grid.RenderTransform>
+                        <Border Background="#000000" Opacity="0.3" Margin="10,10,-10,-10">
+                            <Border.Effect>
+                                <BlurEffect Radius="10"/>
+                            </Border.Effect>
+                        </Border>
+                        <Border x:Name="BlurMask" Background="{DynamicResource BlurImage}"/>
+                        
+                        <Grid>
+                            <Grid.OpacityMask>
+                                <VisualBrush Visual="{Binding ElementName=BlurMask}"/>
+                            </Grid.OpacityMask>
+                            <Image x:Name="BlurImage" Source="{Binding DisplayBackgroundImage, Converter={StaticResource ImageStringToImageConverter}}" 
+                                   Width="14" Height="8" Margin="0,150,0,-150" RenderTransformOrigin="0.5,0.5" Opacity="0.5" Visibility="Collapsed"
+                                   RenderOptions.BitmapScalingMode="LowQuality" StretchDirection="Both"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Stretch="Fill" >
+                                <Image.RenderTransform>
+                                    <ScaleTransform ScaleX="55" ScaleY="55"/>
+                                </Image.RenderTransform>
+                                <Image.CacheMode>
+                                    <BitmapCache RenderAtScale="0.1"/>
+                                </Image.CacheMode>
+                            </Image>
+                        </Grid>
+                        
+                        <Image x:Name="CoverImage" Source="{Binding CoverImageObjectCached}"
+                                   RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Stretch="UniformToFill" >
+                        </Image>
+                        
+                        <!--Extra Metadata Tools Logo-->
+                        <StackPanel x:Name="Logo" Visibility="Collapsed" HorizontalAlignment="Center" VerticalAlignment="Center">
+                            <StackPanel.Effect>
+                                <DropShadowEffect BlurRadius="5" Opacity="0.75"/>
+                            </StackPanel.Effect>
+                            <TextBlock Name="LogoPath" Tag="{DynamicResource ExtraMetadataPath}" Visibility="Collapsed">
+                                <TextBlock.Style>
+                                    <Style TargetType="TextBlock">
+                                        <Setter Property="Text">
+                                            <Setter.Value>
+                                                <MultiBinding StringFormat="{}{0}{1}{2}{3}">
+                                                    <Binding RelativeSource="{RelativeSource Self}" Path="Tag" />
+                                                    <Binding Source="\ExtraMetadata\games\"/>
+                                                    <Binding Path="Id"/>
+                                                    <Binding Source="\logo.png" />
+                                                </MultiBinding>
+                                            </Setter.Value>
+                                        </Setter>
+                                    </Style>
+                                </TextBlock.Style>
+                            </TextBlock>
+                            <StackPanel HorizontalAlignment="Left" Margin="0">
+                                <Image Name="LogoImage" Grid.ZIndex="1" MaxWidth="400" MaxHeight="200" 
+                                           Stretch="Uniform" RenderOptions.BitmapScalingMode="Fant" 
+                                           VerticalAlignment="Top" HorizontalAlignment="Left" 
+                                           Tag="{DynamicResource UseAbsoluteExtraMetadataPath}">
+                                    <Image.Style>
+                                        <Style TargetType="Image">
+                                            <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text}"/>
+                                            <Style.Triggers>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="">
+                                                    <Setter Property="Source" Value="{Binding ElementName=LogoPath, Path=Text, Converter={StaticResource ImageStringToImageConverter}}"/>
+                                                </DataTrigger>
+                                                <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                                                    <Setter Property="Visibility" Value="Collapsed"/>
+                                                </DataTrigger>
+                                            </Style.Triggers>
+                                        </Style>
+                                    </Image.Style>
+                                </Image>
+                            </StackPanel>
+                        </StackPanel>
+
+                        <!-- Features -->
+                        <ItemsControlEx x:Name="Features" ItemsSource="{Binding Features}" Visibility="Collapsed"
+                                        HorizontalAlignment="Right" VerticalAlignment="Bottom"
+                                        Margin="0,0,10,10" 
+                                        IsTabStop="False" IsEnabled="False">
+                            <ItemsControlEx.ItemsPanel>
+                                <ItemsPanelTemplate>
+                                    <StackPanel Orientation="Horizontal" Height="Auto"/>
+                                </ItemsPanelTemplate>
+                            </ItemsControlEx.ItemsPanel>
+                            <ItemsControlEx.ItemTemplate>
+                                <DataTemplate>
+                                    <Grid Margin="0,0,6,0">
+                                        <Grid.ColumnDefinitions>
+                                            <ColumnDefinition Width="auto" />
+                                        </Grid.ColumnDefinitions>
+                                        <Border Background="#80000000" CornerRadius="5" Margin="0"/>
+                                        <Image Grid.Column="0" x:Name="FeatureIconImage"
+                                                   RenderOptions.BitmapScalingMode="Fant"
+                                                   SnapsToDevicePixels="True"
+                                                   Height="30"
+                                                   Source="{ThemeFileBinding Name, PathFormat='Images/Features/{0}.png'}" />
+                                    </Grid>
+
+                                    <DataTemplate.Triggers>
+                                        <DataTrigger Binding="{Binding ElementName=FeatureIconImage, Path=Source}" Value="{x:Null}">
+                                            <Setter Property="Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </DataTemplate.Triggers>
+                                </DataTemplate>
+                            </ItemsControlEx.ItemTemplate>
+                        </ItemsControlEx>
+
+                        <Border Background="#AA000000" x:Name="BorderDarken" Style="{DynamicResource CornerRadius}" Visibility="Collapsed">
+                            <Border.CacheMode>
+                                <BitmapCache EnableClearType="False" 
+                                             RenderAtScale="0.5" 
+                                             SnapsToDevicePixels="False"/>
+                            </Border.CacheMode>
+                        </Border>
+
+                        <Grid x:Name="IsFocused" Opacity="0">
+                            <Border x:Name="MainBorder" BorderThickness="3" BorderBrush="#A7ABAD"
+                                Margin="-6" Visibility="Collapsed" CornerRadius="0"/>
+                        </Grid>
+                        <Border x:Name="FlashBorder" CornerRadius="0" Opacity="0" Style="{DynamicResource AnimatedFlashCover}"  Visibility="Collapsed" Tag="False"/>
+
+                        <Grid Tag="{DynamicResource NewToLibraryBool}">
+                            <Grid.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                                            <Setter Property="ItemsControl.Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                            <Grid x:Name="NewToLibrary" Visibility="Collapsed">
+                                <Border Background="#199FFF" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
+                                <TextBlock x:Name="NewText" Text="{DynamicResource NewToLibrary}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <Trigger Property="ListBox.AlternationIndex" Value="0">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="1">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="2">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="3">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="4">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="5">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="6">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="7">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="8">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="9">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="10">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="11">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="12">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="13">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="14">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="15">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="16">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="17">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="18">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="19">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="20">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="21">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="22">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="23">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="24">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="25">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="26">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="27">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="28">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="29">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="30">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="31">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="32">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="33">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="34">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="35">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="36">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="37">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="38">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="39">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="40">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="41">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="42">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="43">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="44">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="45">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="46">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="47">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="48">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="49">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="50">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="51">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="52">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="53">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="54">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="55">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="56">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="57">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="58">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="59">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="60">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="61">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="62">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="63">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="64">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="65">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="66">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="67">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="68">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="69">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="70">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="71">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="72">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="73">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="74">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="75">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="76">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="77">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="78">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="79">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="80">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="81">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="82">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="83">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="84">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="85">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="86">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="87">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="88">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="89">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="90">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="91">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="92">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="93">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="94">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="95">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="96">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="97">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="98">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        <Trigger Property="ListBox.AlternationIndex" Value="99">
+                            <Setter Property="Visibility" Value="Visible"/>
+                        </Trigger>
+                        
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsInstalled}" Value="False" />
+                                <Condition Binding="{Settings Fullscreen.DarkenUninstalledGamesGrid}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderDarken" />
+                        </MultiDataTrigger>
+                        
+                        <DataTrigger Binding="{Binding ElementName=PART_ListGameItems, Path=IsKeyboardFocusWithin}" Value="True">
+                            <Setter Property="Opacity" Value="1" TargetName="IsFocused" />
+                        </DataTrigger>
+                        <Trigger Property="IsSelected" Value="True">
+                            <Setter Property="Source" TargetName="CoverImage" Value="{Binding DisplayBackgroundImage, Converter={StaticResource ImageStringToImageConverter}}"/>
+                            <Setter Property="Width" Value="693"/>
+                            <Setter Property="Margin" Value="0,0,10,0"/>
+                            <Setter Property="Visibility" Value="Visible" TargetName="Logo" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="Features" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="BlurImage" />
+
+                            <Setter Property="Visibility" Value="Visible" TargetName="MainBorder" />
+                            <Setter Property="Canvas.ZIndex" Value="90" />
+                            <Setter Property="Visibility" Value="Visible" TargetName="FlashBorder" />
+                            <Setter Property="Tag" Value="True" TargetName="FlashBorder" />
+                            <Trigger.ExitActions>
+                                <BeginStoryboard Storyboard="{StaticResource FocusedOff}" />
+                            </Trigger.ExitActions>
+                            <Trigger.EnterActions>
+                                <BeginStoryboard Storyboard="{StaticResource FocusedOn}" />
+                                <BeginStoryboard Storyboard="{StaticResource Focus}" />
+                                <BeginStoryboard Storyboard="{StaticResource BorderExpand}" />
+                            </Trigger.EnterActions>
+                        </Trigger>
+
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsInstalled}" Value="True" />
+                                <Condition Binding="{Binding PlayCount}" Value="0" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Visibility" Value="Visible" TargetName="NewToLibrary"/>
+                        </MultiDataTrigger>
+
+                        <!--DataTrigger Binding="{Settings GridItemHeightRatio}" Value="1">
+                            <Setter Property="MaxHeight" Value="168" />
+                        </>
+                        <DataTrigger Binding="{Settings GridItemHeightRatio}" Value="4">
+                            <Setter Property="MaxHeight" Value="229" />
+                        </DataTrigger>
+                        <DataTrigger Binding="{Settings GridItemHeightRatio}" Value="3">
+                            <Setter Property="MaxHeight" Value="251" />
+                        </DataTrigger-->
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="NewItemsStyle" TargetType="ListBoxItem">
+        <Setter Property="Background" Value="Transparent" />
+        <Setter Property="FocusVisualStyle" Value="{x:Null}" />
+        <Setter Property="SnapsToDevicePixels" Value="True" />
+        <Setter Property="VerticalAlignment" Value="Center" />
+        <Setter Property="Focusable" Value="False"/>
+        <Setter Property="Visibility" Value="Visible"/>
+        <Setter Property="Height" Value="0"/>
+        <Setter Property="Width" Value="0"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="ListBoxItem">
+                    <Grid Margin="10"
+                          RenderTransformOrigin="0,0.5" VerticalAlignment="Top"
+                          d:DataContext="{x:Static DesignMainViewModel.DesignSelectedGameIntance}">
+                        <Grid.RenderTransform>
+                            <ScaleTransform x:Name="ScaleTransform" ScaleX="1" ScaleY="1" />
+                        </Grid.RenderTransform>
+                        <Image x:Name="CoverImage" Source="{Binding CoverImageObjectCached}"
+                                   RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
+                                   VerticalAlignment="Center" HorizontalAlignment="Center"
+                                   Stretch="UniformToFill" >
+                        </Image>
+                        <Border Background="#AA000000" x:Name="BorderDarken" Style="{DynamicResource CornerRadius}" Visibility="Collapsed">
+                            <Border.CacheMode>
+                                <BitmapCache EnableClearType="False" 
+                                             RenderAtScale="0.5" 
+                                             SnapsToDevicePixels="False"/>
+                            </Border.CacheMode>
+                        </Border>
+                        <Grid Tag="{DynamicResource NewToLibraryBool}">
+                            <Grid.Style>
+                                <Style>
+                                    <Style.Triggers>
+                                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Tag}" Value="false">
+                                            <Setter Property="ItemsControl.Visibility" Value="Collapsed"/>
+                                        </DataTrigger>
+                                    </Style.Triggers>
+                                </Style>
+                            </Grid.Style>
+                            <Grid x:Name="NewToLibrary" Visibility="Collapsed">
+                                <Border Background="#199FFF" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
+                                <TextBlock x:Name="NewText" Text="{DynamicResource NewToLibrary}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
+                            </Grid>
+                        </Grid>
+                    </Grid>
+                    <ControlTemplate.Triggers>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsInstalled}" Value="False" />
+                                <Condition Binding="{Settings Fullscreen.DarkenUninstalledGamesGrid}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderDarken" />
+                        </MultiDataTrigger>
+                        
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding IsInstalled}" Value="True" />
+                                <Condition Binding="{Binding PlayCount}" Value="0" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Visibility" Value="Visible" TargetName="NewToLibrary"/>
+                            <Setter Property="Height" Value="380" />
+                            <Setter Property="Width" Value="260" />
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <!--Condition Binding="{Binding IsInstalled}" Value="True" /-->
+                                <Condition Binding="{Binding Favorite}" Value="True" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Height" Value="380"/>
+                            <Setter Property="Width" Value="260" />
+                        </MultiDataTrigger>
+                        <MultiDataTrigger>
+                            <MultiDataTrigger.Conditions>
+                                <Condition Binding="{Binding PlayCount}" Value="0" />
+                            </MultiDataTrigger.Conditions>
+                            <Setter Property="Height" Value="380" />
+                            <Setter Property="Width" Value="260" />                            
+                        </MultiDataTrigger>
+                        
+                        <DataTrigger Binding="{Binding RelativeSource={RelativeSource Self}, Path=Height}" Value="0">
+                            <Setter Property="Width" Value="0" />
+                        </DataTrigger>
+                    </ControlTemplate.Triggers>
+                </ControlTemplate>
+            </Setter.Value>
+        </Setter>
+    </Style>
+
+    <Style x:Key="ListBoxTemplate" TargetType="{x:Type ListBox}">
+        <Setter Property="ItemsControl.ItemsSource" Value="{Binding ElementName=PART_ListGameItems, Path=ItemsSource}"/>
+        <Setter Property="Template">
+            <Setter.Value>
+                <ControlTemplate TargetType="{x:Type ListBox}">
+                    <ScrollViewer CanContentScroll="True" HorizontalScrollBarVisibility="Disabled">
+                        <VirtualizingStackPanel x:Name="StackPanel1" IsItemsHost="True" Orientation="Horizontal" HorizontalAlignment="Left"/>
+                    </ScrollViewer>
+                    <ControlTemplate.Triggers>
+                        <DataTrigger Binding="{Binding ElementName=PART_ElemGameStatus, Path=Visibility}" Value="Visible">
+                            <Setter Property="ItemsControl.ItemsSource" Value="{Binding ElementName=BlankList, Path=ItemsSource}" />
+                        </DataTrigger>
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

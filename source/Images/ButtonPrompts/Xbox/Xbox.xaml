@@ -4,7 +4,7 @@
     <DataTemplate x:Key="ButtonPromptA">
         <Viewbox>
             <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                       Foreground="{DynamicResource TextBrush}"
+                       Foreground="#7dc242"
                        Text="q" />
         </Viewbox>
     </DataTemplate>
@@ -12,7 +12,7 @@
     <DataTemplate x:Key="ButtonPromptB">
         <Viewbox>
             <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="{DynamicResource TextBrush}"
+                        Foreground="#ed1c24"
                         Text="e" />
         </Viewbox>
     </DataTemplate>
@@ -20,7 +20,7 @@
     <DataTemplate x:Key="ButtonPromptX">
         <Viewbox>
             <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                       Foreground="{DynamicResource TextBrush}"
+                       Foreground="#24bcee"
                        Text="t" />
         </Viewbox>
     </DataTemplate>
@@ -28,7 +28,7 @@
     <DataTemplate x:Key="ButtonPromptY">
         <Viewbox>
             <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="{DynamicResource TextBrush}"
+                        Foreground="#f0ea1b"
                         Text="u" />
         </Viewbox>
     </DataTemplate>

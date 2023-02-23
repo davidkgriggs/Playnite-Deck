@@ -43,3 +43,13 @@ Packages:
     PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v2.1.0/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_2_1_0.pthm
     Changelog:
       - Updated visuals throughout
+  - Version: 3.0.0
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2023-02-23
+    PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v3.0.0/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_3_0_0.pthm
+    Changelog:
+      - Remade to be closer to the Steam Deck UI
+      - Now requires you to have Horizontal Scrolling turned OFF and Item Spacing set to 150
+      - Forces covers to 2:3 aspect ratio just like the Steam Deck
+      - Uses Background Images to make "Grids", and logos via the Extra MetaData Loader
+      - Tested on Main PC and Steam Deck via installing Windows 11, it runs smooth on both

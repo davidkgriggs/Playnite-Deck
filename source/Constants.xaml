@@ -29,29 +29,35 @@
 
     <Color x:Key="BlackColor">#FF000000</Color>
     <Color x:Key="WhiteColor">#FFFFFFFF</Color>
-    <Color x:Key="GlyphColor">#FFEC6200</Color>
-    <Color x:Key="GlyphLightColor">#FFFFAA00</Color>
-    <Color x:Key="SelectionLightColor">#FF8D919D</Color>
-    <Color x:Key="OverlayColor">#BB000000</Color>
-    <Color x:Key="UIColour">#23262E</Color>
 
-    <Color x:Key="ControlBackgroundColor">#FF2B354D</Color>
-    <Color x:Key="ControlBackgroundColorDark">#FF121830</Color>
+    <!--C1--><Color x:Key="ControlBackgroundColor">#212121</Color><!--C1-->
+    <!--C2--><Color x:Key="ControlBackgroundColorDark">#101010</Color><!--C2-->
+    <!--C3--><Color x:Key="UIColour">#C9F5FF</Color><!--C3-->
+    <!--C4--><Color x:Key="UIColourDark">#51B0E5</Color><!--C4-->
+    <!--C5--><Color x:Key="GlyphColor">#34ACBC</Color><!--C5-->
+    <!--C6--><Color x:Key="GlyphLightColor">#85C3CF</Color><!--C6-->
+    <!--C7--><Color x:Key="SelectionLightColor">#7A7D84</Color><!--C7-->
+    <!--C8--><Color x:Key="UIColourDarker">#2177A7</Color><!--C8-->
 
-    <Color x:Key="TextColor">#FFEBEBEB</Color>
-    <Color x:Key="TextColorDark">#FFEBEBEB</Color>
+    <Color x:Key="ControlBackgroundColorLight">#e0e0e0</Color>
+
+    <Color x:Key="TextColor">#f5f5f5</Color>
+    <Color x:Key="TextColorDarker">#a5a5a5</Color>
+    <Color x:Key="TextColorDark">#282828</Color>
 
     <SolidColorBrush x:Key="TextBrush" Color="{DynamicResource TextColor}" />
+    <SolidColorBrush x:Key="TextBrushDarker" Color="{DynamicResource TextColorDarker}" />
     <SolidColorBrush x:Key="TextBrushDark" Color="{DynamicResource TextColorDark}" />
-    <SolidColorBrush x:Key="GlyphBrush" Color="{DynamicResource UIColour}" />
-    <SolidColorBrush x:Key="GlyphLightBrush" Color="{DynamicResource UIColour}" />
+    <SolidColorBrush x:Key="GlyphBrush" Color="{DynamicResource GlyphColor}" />
+    <SolidColorBrush x:Key="GlyphLightBrush" Color="{DynamicResource GlyphLightColor}" />
     <SolidColorBrush x:Key="ControlBackgroundBrush" Color="{DynamicResource ControlBackgroundColor}" />
     <SolidColorBrush x:Key="ControlBackgroundDarkBrush" Color="{DynamicResource ControlBackgroundColorDark}" />
-    <SolidColorBrush x:Key="SelectionLightBrush" Color="{DynamicResource UIColour}" />
+    <SolidColorBrush x:Key="SelectionLightBrush" Color="{DynamicResource SelectionLightColor}" />
     <SolidColorBrush x:Key="OverlayBrush" Color="{DynamicResource OverlayColor}" />
     <SolidColorBrush x:Key="CheckBoxCheckMarkBkBrush" Color="{DynamicResource ControlBackgroundColorDark}" />
     <SolidColorBrush x:Key="WarningBrush" Color="#ff6b6b" />
-    <!--UIB--><SolidColorBrush x:Key="UIBrush" Color="{DynamicResource UIColour}" /><!--UIB-->
+    <SolidColorBrush x:Key="UIBrush" Color="{DynamicResource UIColourDarker}" />
+    <SolidColorBrush x:Key="UIBrushDark" Color="{DynamicResource UIColourDark}" />   
 
     <sys:Double x:Key="FontSizeSmall">20</sys:Double>
     <sys:Double x:Key="FontSize">22</sys:Double>
@@ -67,6 +73,11 @@
     <LinearGradientBrush x:Key="MainBackgourndBrush" StartPoint="0.5,0" EndPoint="0.5,1" >
         <GradientStop Color="#373D49" Offset="0.0"/>
         <GradientStop Color="#191B21" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="BubbleBrush" StartPoint="0.5,0" EndPoint="0.5,1" >
+        <GradientStop Color="#455260" Offset="0.0"/>
+        <GradientStop Color="#445160" Offset="1"/>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="TopBarBackgroundBrush" StartPoint="-0.5,0.5" EndPoint="1,0.5" >
@@ -85,8 +96,8 @@
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="SelectionBrush" StartPoint="0.5,-0.5" EndPoint="1,1.5" >
-        <GradientStop Color="{DynamicResource UIColour}" Offset="0"/>
-        <GradientStop Color="{DynamicResource UIColour}" Offset="1.0"/>
+        <GradientStop Color="{DynamicResource GlyphColor}" Offset="0"/>
+        <GradientStop Color="{DynamicResource GlyphLightColor}" Offset="1.0"/>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="GameDetailsBackgroundBrush" StartPoint="0.5,0" EndPoint="0.5,0.4" >
@@ -97,6 +108,11 @@
     <LinearGradientBrush x:Key="HOMEBackground" StartPoint="0,0" EndPoint="1,1" >
         <GradientStop Color="#21313d" Offset="0.0"/>
         <GradientStop Color="#1c1f2a" Offset="1"/>
+    </LinearGradientBrush>
+
+    <LinearGradientBrush x:Key="HOMEBottomBackground" StartPoint="0,0.5" EndPoint="1,0.5" >
+        <GradientStop Color="#1e2e3a" Offset="0.0"/>
+        <GradientStop Color="#18222e" Offset="1"/>
     </LinearGradientBrush>
 
     <LinearGradientBrush x:Key="HOMECardBackground" StartPoint="0,0" EndPoint="1,1" >
@@ -130,6 +146,11 @@
         <GradientStop Color="#40000000" Offset="0.5"/>
         <GradientStop Color="#80000000" Offset="0.6"/>
     </LinearGradientBrush>
+
+    <RadialGradientBrush x:Key="BlurImage" Center="0.5,0.5" RadiusX="0.5" RadiusY="0.5" GradientOrigin="0.5,0.5">
+        <GradientStop Color="Black" Offset="0.75" />
+        <GradientStop Color="#00000000" Offset="1" />
+    </RadialGradientBrush>
 
 
 

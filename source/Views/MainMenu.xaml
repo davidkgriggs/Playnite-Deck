@@ -3,7 +3,7 @@
                     xmlns:pmrk="clr-namespace:Playnite.FullscreenApp.Markup;assembly=Playnite.FullscreenApp">
     
     <Style x:Key="MainMenuBorder" TargetType="Border">
-        <Setter Property="Background" Value="{DynamicResource OverlayMenuBackgroundBrush}" />
+        <Setter Property="Background" Value="#0E141A" />
     </Style>
 
     <Style x:Key="MainMenuButton" BasedOn="{StaticResource {x:Type ButtonEx}}" TargetType="ButtonEx">
