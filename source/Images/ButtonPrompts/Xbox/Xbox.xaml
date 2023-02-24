@@ -3,33 +3,25 @@
 
     <DataTemplate x:Key="ButtonPromptA">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                       Foreground="#7dc242"
-                       Text="q" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/A.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 
     <DataTemplate x:Key="ButtonPromptB">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="#ed1c24"
-                        Text="e" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/B.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 
     <DataTemplate x:Key="ButtonPromptX">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                       Foreground="#24bcee"
-                       Text="t" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/X.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 
     <DataTemplate x:Key="ButtonPromptY">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="#f0ea1b"
-                        Text="u" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/Y.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 
@@ -67,33 +59,25 @@
 
     <DataTemplate x:Key="ButtonPromptBack">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="{DynamicResource TextBrush}"
-                        Text="b" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/B.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 
     <DataTemplate x:Key="ButtonPromptStart">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="{DynamicResource TextBrush}"
-                        Text="k" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/SD_START.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 
     <DataTemplate x:Key="ButtonPromptLS">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="{DynamicResource TextBrush}"
-                        Text="g" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/LSpng'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 
     <DataTemplate x:Key="ButtonPromptRS">
         <Viewbox>
-            <TextBlock FontFamily="{DynamicResource FontXboxOneController}"
-                        Foreground="{DynamicResource TextBrush}"
-                        Text="x" />
+            <Image Source="{ThemeFile 'Images/Buttons/Light/RS.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
         </Viewbox>
     </DataTemplate>
 </ResourceDictionary>

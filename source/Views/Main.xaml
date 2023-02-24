@@ -1355,7 +1355,7 @@
                                                  SelectedValue="{Binding ElementName=PART_ListGameItems, Path=SelectedValue}"
                                                  IsSynchronizedWithCurrentItem="True"
                                                  ItemContainerStyle="{DynamicResource RowItemsStyle}"
-                                                 AlternationCount="1000000">
+                                                 AlternationCount="100000">
                                         </ListBox>
                                     </StackPanel>
 
@@ -1630,7 +1630,7 @@
                                          SelectedValue="{Binding ElementName=PART_ListGameItems, Path=SelectedValue}"
                                          IsSynchronizedWithCurrentItem="True"
                                          ItemContainerStyle="{DynamicResource NewItemsStyle}"
-                                         AlternationCount="1000000">
+                                         AlternationCount="100000">
                                     </ListBox>
                                 </Grid>                                
                             </Grid>
@@ -1820,7 +1820,7 @@
                                                KeyboardNavigation.DirectionalNavigation="Once"
                                                ScrollViewer.HorizontalScrollBarVisibility="Disabled"
                                                ScrollViewer.VerticalScrollBarVisibility="Disabled"
-                                               AlternationCount="1000000">
+                                               AlternationCount="100000">
                                         <ListBox.Style>
                                             <Style TargetType="ListBoxEx">
                                                 <Setter Property="VerticalAlignment" Value="Top"/>

@@ -71,8 +71,7 @@
 
                         <StackPanel Orientation="Horizontal" VerticalAlignment="Center" Margin="0,0,0,0">
                             <StackPanel x:Name="ON" Orientation="Horizontal" VerticalAlignment="Center" HorizontalAlignment="Left" Margin="20,0,0,0">
-                                <ContentControl x:Name="Icon" ContentTemplate="{DynamicResource ButtonPromptBack}" Height="40" Focusable="False"
-                                                Foreground="#9CA3AB" VerticalAlignment="Center" Margin="20,0,0,0"/>
+                                <Image Source="{ThemeFile 'Images/Buttons/Light/SD_SELECT.png'}" RenderOptions.BitmapScalingMode="Fant" Height="45"/>
 
                                 <TextBlock x:Name="Menu" Text="MENU" Style="{DynamicResource TextBlockBaseStyle}" FontSize="22" FontWeight="Bold"
                                        Foreground="#9CA3AB"
@@ -82,14 +81,12 @@
                     </Grid>
                     <ControlTemplate.Triggers>
                         <Trigger Property="IsFocused" Value="True">
-                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
-                            <Setter Property="Foreground" Value="Black" TargetName="Icon"/>                            
+                            <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />                   
                             <Setter Property="Foreground" Value="Black" TargetName="Menu"/>
                             <Setter Property="Foreground" Value="{DynamicResource OverlayMenuBackgroundBrush}"/>
                         </Trigger>
                         <Trigger Property="IsMouseOver" Value="True">
                             <Setter Property="Visibility" Value="Visible" TargetName="BorderFocus" />
-                            <Setter Property="Foreground" Value="Black" TargetName="Icon"/>
                             <Setter Property="Foreground" Value="Black" TargetName="Menu"/>
                             <Setter Property="Foreground" Value="{DynamicResource OverlayMenuBackgroundBrush}"/>
                         </Trigger>
