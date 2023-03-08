@@ -72,7 +72,7 @@
                                 </Style>
                             </Grid.Style>
                             <Grid x:Name="NewToLibrary" Visibility="Collapsed">
-                                <Border Background="#199FFF" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
+                                <Border Background="#199FFF" CornerRadius="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
                                 <TextBlock x:Name="NewText" Text="{DynamicResource NewToLibrary}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
                             </Grid>
                         </Grid>
@@ -600,9 +600,12 @@
                         </Grid>
                         
                         <Image x:Name="CoverImage" Source="{Binding CoverImageObjectCached}"
-                                   RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
+                                   RenderOptions.BitmapScalingMode="Linear" StretchDirection="Both"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
                                    Stretch="UniformToFill" >
+                            <Image.CacheMode>
+                                <BitmapCache RenderAtScale="0.9"/>
+                            </Image.CacheMode>
                         </Image>
                         
                         <!--Extra Metadata Tools Logo-->
@@ -700,7 +703,7 @@
                                 </Style>
                             </Grid.Style>
                             <Grid x:Name="NewToLibrary" Visibility="Collapsed">
-                                <Border Background="#199FFF" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
+                                <Border Background="#199FFF" CornerRadius="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
                                 <TextBlock x:Name="NewText" Text="{DynamicResource NewToLibrary}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
                             </Grid>
                         </Grid>
@@ -1085,6 +1088,9 @@
                                    RenderOptions.BitmapScalingMode="Fant" StretchDirection="Both"
                                    VerticalAlignment="Center" HorizontalAlignment="Center"
                                    Stretch="UniformToFill" >
+                            <Image.CacheMode>
+                                <BitmapCache RenderAtScale="0.8"/>
+                            </Image.CacheMode>
                         </Image>
                         <Border Background="#AA000000" x:Name="BorderDarken" Style="{DynamicResource CornerRadius}" Visibility="Collapsed"/>
                         <Grid Tag="{DynamicResource NewToLibraryBool}">
@@ -1098,7 +1104,7 @@
                                 </Style>
                             </Grid.Style>
                             <Grid x:Name="NewToLibrary" Visibility="Collapsed">
-                                <Border Background="#199FFF" CornerRadius="5" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
+                                <Border Background="#199FFF" CornerRadius="0" HorizontalAlignment="Stretch" VerticalAlignment="Top" Height="50" Margin="20,-10,20,10"/>
                                 <TextBlock x:Name="NewText" Text="{DynamicResource NewToLibrary}" Style="{DynamicResource TextBlockBaseStyle}" FontSize="16" FontWeight="SemiBold" HorizontalAlignment="Center" VerticalAlignment="Top" Margin="0,5,0,0"/>
                             </Grid>
                         </Grid>
@@ -1158,6 +1164,9 @@
                         <DataTrigger Binding="{Binding ElementName=PART_ElemGameStatus, Path=Visibility}" Value="Visible">
                             <Setter Property="ItemsControl.ItemsSource" Value="{Binding ElementName=BlankList, Path=ItemsSource}" />
                         </DataTrigger>
+                        <!--DataTrigger Binding="{Binding RelativeSource={RelativeSource FindAncestor, AncestorType={x:Type Window}}, Path=IsActive}" Value="False">
+                            <Setter Property="ItemsControl.ItemsSource" Value="{Binding ElementName=BlankList, Path=ItemsSource}" />
+                        </DataTrigger-->
                     </ControlTemplate.Triggers>
                 </ControlTemplate>
             </Setter.Value>

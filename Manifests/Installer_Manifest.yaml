@@ -60,3 +60,11 @@ Packages:
     Changelog:
       - Performance fixes
       - Changed button Icons to Steam ones
+  - Version: 3.0.2
+    RequiredApiVersion: 2.3.0
+    ReleaseDate: 2023-03-08
+    PackageUrl: https://github.com/davidkgriggs/Playnite-Deck/releases/download/v3.0.2/Playnite_Deck_905f24da-b02b-40df-9f6b-14c41fcdb05d_3_0_2.pthm
+    Changelog:
+      - Performance fixes
+      - Search button is not the first selected anymore when navigating up
+      - Other visual updates

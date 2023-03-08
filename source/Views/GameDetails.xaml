@@ -558,12 +558,12 @@
 
                                     <Grid Grid.Row="1" Margin="0,100,0,0" HorizontalAlignment="Left" VerticalAlignment="Top">
                                         <Grid.ColumnDefinitions>
-                                            <ColumnDefinition Width="200"/>
+                                            <ColumnDefinition Width="285"/>
                                             <ColumnDefinition Width="*"/>
                                             <ColumnDefinition Width="400"/>
                                         </Grid.ColumnDefinitions>
-                                        <Grid Grid.Column="0" Margin="25,0,0,25" Width="200" VerticalAlignment="Center" HorizontalAlignment="Left">
-                                            <Image x:Name="PART_ImageCover" Width="200" Stretch="Uniform"/>
+                                        <Grid Grid.Column="0" Margin="25,0,0,-100" Width="260" Height="380" VerticalAlignment="Center" HorizontalAlignment="Left">
+                                            <Image x:Name="PART_ImageCover" Width="260" Height="380" Stretch="UniformToFill"/>
                                         </Grid>
 
                                         <Border Grid.Column="1" x:Name="Description" Margin="20,0,20,0" VerticalAlignment="Top" Height="240">

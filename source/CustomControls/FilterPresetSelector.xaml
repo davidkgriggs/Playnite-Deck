@@ -6,7 +6,7 @@
         <Setter Property="FocusVisualStyle" Value="{x:Null}" />
         <Setter Property="SnapsToDevicePixels" Value="True" />
         <Setter Property="VerticalAlignment" Value="Center" />
-        <Setter Property="MinWidth" Value="100"/>
+        <Setter Property="MinWidth" Value="200"/>
         <Setter Property="Focusable" Value="False" />
         <Setter Property="Visibility" Value="Collapsed"/>
         <Setter Property="Template">
@@ -16,7 +16,7 @@
                             Margin="10,0,10,0">
                         <Border x:Name="VerticalBubble" Background="{TemplateBinding Background}" CornerRadius="35" Opacity="0" Margin="1" Visibility="Collapsed"/>
                         <Border x:Name="VerticalBubbleFocus" Background="White" CornerRadius="35" Opacity="0" Visibility="Collapsed"/>
-                        <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="42" FontWeight="SemiBold" Foreground="#e0e4e7"
+                        <TextBlock Style="{DynamicResource TextBlockBaseStyle}" FontSize="42" FontWeight="SemiBold" Foreground="#e0e4e7" HorizontalAlignment="Center"
                                    x:Name="TextContent">                            
                             <Grid Margin="25,15,25,15">                                
                                 <TextBlock Text="{Binding Name}" FontWeight="SemiBold" Visibility="Hidden" HorizontalAlignment="Center" VerticalAlignment="Center"/>
